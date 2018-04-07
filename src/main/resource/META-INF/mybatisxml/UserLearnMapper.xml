@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="example.model.dao.UserLearnMapper">
+
+	<resultMap id="BASE-RESULT" type="example.model.dataobject.UserLearn">
+        <result property="id" column="id" />
+        <result property="userId" column="user_id" />
+        <result property="calligrapyId" column="calligrapy_id" />
+        <result property="learnProgress" column="learn_progress" />
+        <result property="historyScore" column="history_score" />
+        <result property="averageScore" column="average_score" />
+		<result property="highestScore" column="highest_score" />
+
+		<result property="createTime" column="create_time" />
+        <result property="updateTime" column="update_time" />
+
+	</resultMap>
+
+	
+  	<insert id="insert" parameterType="example.model.dataobject.UserLearn">
+  		INSERT INTO user_learn ( 
+			user_id,calligrapy_id,learn_progress,history_score,average_score,highest_score,create_time,update_time
+  		) VALUES (
+			#{userId},#{calligrapyId},#{learnProgress},#{historyScore},#{averageScore},#{highestScore},#{createTime},#{updateTime}
+  		)   
+  		<selectKey resultType="Integer" keyProperty="id">    
+      		SELECT LAST_INSERT_ID()     
+		</selectKey> 
+  	</insert>
+  	
+  	<update id="update" parameterType="example.model.dataobject.UserLearn" >
+		UPDATE
+			user_learn
+		SET
+            <if test="id!=null"> id = #{id} </if>
+            <if test="userId!=null">, user_id = #{userId} </if>
+            <if test="calligrapyId!=null">, calligrapy_id = #{calligrapyId} </if>
+            <if test="learnProgress!=null">, learn_progress = #{learnProgress} </if>
+            <if test="historyScore!=null">, history_score = #{historyScore} </if>
+            <if test="averageScore!=null">, average_score = #{averageScore} </if>
+		<if test="highestScore!=null">, highest_score = #{highestScore} </if>
+
+		<if test="createTime!=null">, create_time = #{createTime} </if>
+            <if test="updateTime!=null">, update_time = #{updateTime} </if>
+
+		<where>
+			id = #{id}
+		</where>
+	</update>
+	
+	
+	<select id="getByKey" resultMap="BASE-RESULT">
+		SELECT * FROM
+			user_learn
+		<where>
+			id = #{key}
+		</where>
+	</select>
+	
+	<delete id="deleteByKey">
+		DELETE FROM
+			user_learn
+		<where>
+			id = #{key}
+		</where>
+	</delete>
+	
+	<select id="findEntitys" parameterType="map" resultMap="BASE-RESULT">
+		SELECT * FROM
+			user_learn
+		<where>
+			<include refid="compareParamColumns" />
+		</where>
+		<if test="param.orderByStr!=null">
+			order by ${param.orderByStr}
+		</if>
+		<if test="param.start!=null and param.pageNum!=null">LIMIT #{param.start},#{param.pageNum}</if>
+	</select>
+
+
+	<select id="getEntitysCount" parameterType="map" resultType="int">
+		SELECT count(*) FROM
+			user_learn
+		<where>
+			<include refid="compareParamColumns" />
+		</where>
+	</select>
+	
+	<sql id="compareParamColumns">
+		1
+        <if test="param.id!=null">
+            AND  id = #{param.id}
+        </if>
+        <if test="param.userId!=null">
+            AND  user_id = #{param.userId}
+        </if>
+        <if test="param.calligrapyId!=null">
+            AND  calligrapy_id = #{param.calligrapyId}
+        </if>
+        <if test="param.learnProgress!=null">
+            AND  learn_progress = #{param.learnProgress}
+        </if>
+        <if test="param.historyScore!=null">
+            AND  history_score = #{param.historyScore}
+        </if>
+        <if test="param.averageScore!=null">
+            AND  average_score = #{param.averageScore}
+        </if>
+		<if test="param.averageScore!=null">
+			AND  highest_score = #{param.highestScore}
+		</if>
+        <if test="param.createTime!=null">
+            AND  create_time = #{param.createTime}
+        </if>
+        <if test="param.updateTime!=null">
+            AND  update_time = #{param.updateTime}
+        </if>
+
+	</sql>
+	
+</mapper>

@@ -1,0 +1,48 @@
+ 
+package example.model.service;
+
+import java.util.List;
+import java.util.Map;
+import java.lang.Integer;
+import org.apache.ibatis.annotations.Param;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import example.model.dao.CalligraphyMapper;
+import example.model.dataobject.Calligraphy;
+import org.springframework.stereotype.Service;
+
+
+@Service
+public class CalligraphyServiceImpl implements CalligraphyService{
+
+	@Autowired
+	private CalligraphyMapper dao;
+	
+	public Integer insert(Object entity){
+		return dao.insert((Calligraphy)entity);
+	}
+
+	public Integer update(Object entity){
+		return dao.update((Calligraphy)entity);
+	}
+	
+	public Integer deleteByKey( String key){
+		return dao.deleteByKey(key);
+	}
+	
+	public Calligraphy getByKey( String key){
+		return dao.getByKey(key);
+	}
+	 
+	public List<Calligraphy> findEntitys(Map<String ,Object>  param){
+		return dao.findEntitys(param);
+	}
+	public Integer getEntitysCount(Map<String ,Object>  param){
+		return dao.getEntitysCount(param);
+	}
+	 
+
+}
+
+ 

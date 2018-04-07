@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+##    <meta name="viewport" content="height=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"><meta name="msapplication-tap-highlight" content="no"/>
+
+    <link rel="stylesheet" href="../css/style1.css?v=2">
+
+    <title>html5 图片上传 -访问手机相册</title>
+
+</head>
+<body>
+<!--加载资源-->
+<input type="hidden" id="imgId" value="$!imgId"/>
+<input type="hidden" id="calligraphyId" value="$!calligraphyId"/>
+
+<div class="lazy_tip" id="lazy_tip"><span>1%</span><br>	载入中......</div>
+<div class="lazy_cover"></div>
+<div class="resource_lazy hide"></div>
+
+<div class="pic_edit">
+    <h2 style="color:#4eaf7a;">范例</h2>
+    <div id="example" class="photo-clip-view">
+        <img src="data:image/png;base64,$!img" class="clipArea">
+    </div>
+    <h2 style="color:#4eaf7a;">我的书法</h2>
+    <div id="clipArea" class="clipArea"></div>
+    <button id="upload2">上传笔迹</button>
+    <button id="clipBtn">开始打分</button>
+    <input type="file" id="file" style="opacity: 0;position: fixed;bottom: -100px">
+    <div id="plan" style="display:none">比例剪切后尺寸<canvas id="myCanvas"></canvas><h2 onClick="Close();" style="cursor:pointer; display:inline-block">关闭</h2></div>
+</div>
+
+<img src="" fileName="" id="hit" style="display:none;z-index: 9">
+
+<div id="cover"></div>
+<script src="../js/image/jquery-2.1.0.min.js"></script>
+<script src="../js/image/sonic.js"></script>
+<script src="../js/image/comm.js"></script>
+<script src="../js/image/hammer.js"></script>
+<script src="../js/image/iscroll-zoom.js"></script>
+<script src="../js/image/jquery.photoClip.js?v=1"></script>
+<script src="../js/image/test.js"></script>
+<script>
+
+</script>
+
+</body>
+</html>

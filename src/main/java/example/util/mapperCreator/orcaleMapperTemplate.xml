@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="packageName.dao.ClassNameDao">
+
+	<resultMap id="BASE-RESULT" type="packageName.entity.ClassNameEntity">
+resultMapforChange
+	</resultMap>
+
+	
+  	<insert id="insert" parameterType="packageName.entity.ClassNameEntity">
+  		INSERT INTO tableName ( 
+			insertSqlForChange			
+  		) VALUES (
+			insertJavaForChange		
+  		)   
+  	</insert>
+  	
+  	<update id="update" parameterType="packageName.entity.ClassNameEntity" >
+		UPDATE
+			tableName
+		SET
+updateForChange
+		<where>
+			id = #{id}
+		</where>
+	</update>
+	
+	
+	<select id="getByKey" resultMap="BASE-RESULT">
+		SELECT * FROM
+			tableName
+		<where>
+			id = #{key}
+		</where>
+	</select>
+	
+	<delete id="deleteByKey">
+		DELETE FROM
+			tableName
+		<where>
+			id = #{key}
+		</where>
+	</delete>
+	
+	<select id="findEntitys" parameterType="map" resultMap="BASE-RESULT">
+		<if test="param.start==null or param.pageNum==null">
+			SELECT * FROM
+				tableName
+			<where>
+				<include refid="compareParamColumns" />
+			</where>
+			<if test="param.orderByStr!=null">
+				order by ${param.orderByStr}
+			</if>
+		</if>
+		<!--oracle分页-->
+		<if test="param.start!=null and param.pageNum!=null">
+			              
+   			select t2.* from (
+				select  rownum r,t1.* from (
+					select  * from tableName
+					where 
+					<include refid="compareParamColumns" />
+					<if test="param.orderByStr!=null">
+					order by ${param.orderByStr}
+					</if>
+				) t1
+       		<![CDATA[ 
+			where rownum<=#{param.start}+#{param.pageNum}
+			]]> 
+			)t2 
+			<![CDATA[ 
+			where t2.r>#{param.start} 
+			]]>
+        
+		</if>
+	</select>
+
+
+	<select id="getEntitysCount" parameterType="map" resultType="int">
+		SELECT count(*) FROM
+			tableName
+		<where>
+			<include refid="compareParamColumns" />
+		</where>
+	</select>
+	
+	<sql id="compareParamColumns">
+		1 = 1
+compareParamColumnsForChange
+	</sql>
+	
+</mapper>

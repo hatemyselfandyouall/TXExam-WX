@@ -1,0 +1,27 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script src="/js/vue.js"></script>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="/js/common/image/image.js"></script>
+</head>
+<div id="app">
+    {{ message }}
+</div>
+<div id="upload">
+    <input type="file" id="file1" onchange ='previewImage(this)'>
+    <input type="file" id="file2" onchange ="previewImage2(this)">
+    <div id="preview">
+        <img id="imghead1" width="100%" height="auto" border="0" file="">
+        <img id="imghead2" width="100%" height="auto" border="0" file="">
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<button  onclick="compare()">compare</button>
+

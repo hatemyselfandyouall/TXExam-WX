@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+		PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="example.model.dao.UserMapper">
+
+	<resultMap id="BASE-RESULT" type="example.model.dataobject.User">
+		<result property="id" column="id" />
+		<result property="wAccount" column="w_account" />
+		<result property="wNickname" column="w_nickname" />
+		<result property="sex" column="sex" />
+		<result property="language" column="language" />
+		<result property="city" column="city" />
+		<result property="province" column="province" />
+		<result property="openid" column="openid" />
+		<result property="privilege" column="privilege" />
+		<result property="unionid" column="unionid" />
+		<result property="country" column="country" />
+		<result property="headimgurl" column="headimgurl" />
+		<result property="createTime" column="create_time" />
+		<result property="updateTime" column="update_time" />
+
+	</resultMap>
+
+
+	<insert id="insert" parameterType="example.model.dataobject.User">
+		INSERT INTO user (
+		w_account,w_nickname,sex,language,city,province,country,openid,privilege,unionid,headimgurl,create_time,update_time
+		) VALUES (
+		#{wAccount},#{wNickname},#{sex},#{language},#{city},#{province},#{country},#{openid},#{privilege},#{unionid},#{headimgurl},#{createTime},#{updateTime}
+		)
+		<selectKey resultType="Integer" keyProperty="id">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+	</insert>
+
+	<update id="update" parameterType="example.model.dataobject.User" >
+		UPDATE
+		user
+		SET
+		<if test="id!=null"> id = #{id} </if>
+		<if test="wAccount!=null">, w_account = #{wAccount} </if>
+		<if test="wNickname!=null">, w_nickname = #{wNickname} </if>
+		<if test="sex!=null">, sex = #{sex} </if>
+		<if test="language!=null">, language = #{language} </if>
+		<if test="city!=null">, city = #{city} </if>
+		<if test="openid!=null">, openid = #{openid} </if>
+		<if test="privilege!=null">, privilege = #{privilege} </if>
+		<if test="unionid!=null">, unionid = #{unionid} </if>
+		<if test="province!=null">, province = #{province} </if>
+		<if test="country!=null">, country = #{country} </if>
+		<if test="headimgurl!=null">, headimgurl = #{headimgurl} </if>
+		<if test="createTime!=null">, create_time = #{createTime} </if>
+		<if test="updateTime!=null">, update_time = #{updateTime} </if>
+
+		<where>
+			id = #{id}
+		</where>
+	</update>
+
+
+	<select id="getByKey" resultMap="BASE-RESULT">
+		SELECT * FROM
+		user
+		<where>
+			id = #{key}
+		</where>
+	</select>
+
+	<delete id="deleteByKey">
+		DELETE FROM
+		user
+		<where>
+			id = #{key}
+		</where>
+	</delete>
+
+	<select id="findEntitys" parameterType="map" resultMap="BASE-RESULT">
+		SELECT * FROM
+		user
+		<where>
+			<include refid="compareParamColumns" />
+		</where>
+		<if test="param.orderByStr!=null">
+			order by ${param.orderByStr}
+		</if>
+		<if test="param.start!=null and param.pageNum!=null">LIMIT #{param.start},#{param.pageNum}</if>
+	</select>
+
+
+	<select id="getEntitysCount" parameterType="map" resultType="int">
+		SELECT count(*) FROM
+		user
+		<where>
+			<include refid="compareParamColumns" />
+		</where>
+	</select>
+
+	<sql id="compareParamColumns">
+		1
+		<if test="param.id!=null">
+			AND  id = #{param.id}
+		</if>
+		<if test="param.wAccount!=null">
+			AND  w_account = #{param.wAccount}
+		</if>
+		<if test="param.wNickname!=null">
+			AND  w_nickname = #{param.wNickname}
+		</if>
+		<if test="param.sex!=null">
+			AND  sex = #{param.sex}
+		</if>
+		<if test="param.language!=null">
+			AND  language = #{param.language}
+		</if>
+		<if test="param.city!=null">
+			AND  city = #{param.city}
+		</if>
+		<if test="param.province!=null">
+			AND  province = #{param.province}
+		</if>
+		<if test="param.openid!=null">
+			AND  openid = #{param.openid}
+		</if>
+		<if test="param.privilege!=null">
+			AND  privilege = #{param.privilege}
+		</if>
+		<if test="param.unionid!=null">
+			AND  unionid = #{param.unionid}
+		</if>
+		<if test="param.country!=null">
+			AND  country = #{param.country}
+		</if>
+		<if test="param.headimgurl!=null">
+			AND  headimgurl = #{param.headimgurl}
+		</if>
+		<if test="param.createTime!=null">
+			AND  create_time = #{param.createTime}
+		</if>
+		<if test="param.updateTime!=null">
+			AND  update_time = #{param.updateTime}
+		</if>
+
+	</sql>
+
+</mapper>

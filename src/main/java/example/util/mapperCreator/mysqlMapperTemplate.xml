@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="packageName.dao.ClassNameDao">
+
+	<resultMap id="BASE-RESULT" type="packageName.model.ClassNameEntity">
+resultMapforChange
+	</resultMap>
+
+	
+  	<insert id="insert" parameterType="packageName.model.ClassNameEntity">
+  		INSERT INTO tableName ( 
+			insertSqlForChange			
+  		) VALUES (
+			insertJavaForChange		
+  		)   
+  		<selectKey resultType="Integer" keyProperty="id">    
+      		SELECT LAST_INSERT_ID()     
+		</selectKey> 
+  	</insert>
+  	
+  	<update id="update" parameterType="packageName.model.ClassNameEntity" >
+		UPDATE
+			tableName
+		SET
+updateForChange
+		<where>
+			id = #{id}
+		</where>
+	</update>
+	
+	
+	<select id="getByKey" resultMap="BASE-RESULT">
+		SELECT * FROM
+			tableName
+		<where>
+			id = #{key}
+		</where>
+	</select>
+	
+	<delete id="deleteByKey">
+		DELETE FROM
+			tableName
+		<where>
+			id = #{key}
+		</where>
+	</delete>
+	
+	<select id="findEntitys" parameterType="map" resultMap="BASE-RESULT">
+		SELECT * FROM
+			tableName
+		<where>
+			<include refid="compareParamColumns" />
+		</where>
+		<if test="param.orderByStr!=null">
+			order by ${param.orderByStr}
+		</if>
+		<if test="param.start!=null and param.pageNum!=null">LIMIT #{param.start},#{param.pageNum}</if>
+	</select>
+
+
+	<select id="getEntitysCount" parameterType="map" resultType="int">
+		SELECT count(*) FROM
+			tableName
+		<where>
+			<include refid="compareParamColumns" />
+		</where>
+	</select>
+	
+	<sql id="compareParamColumns">
+		1
+compareParamColumnsForChange
+	</sql>
+	
+</mapper>

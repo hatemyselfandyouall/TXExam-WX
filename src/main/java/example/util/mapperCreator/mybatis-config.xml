@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">  
+<configuration>  
+    <typeAliases>  
+  	    <typeAlias alias="KTBaseUserEntity" 	type="com.yogo.admin.entity.KTBaseUserEntity" /> 
+  	    <typeAlias alias="PubEmpEntity" 	type="com.yogo.admin.entity.PubEmpEntity" /> 
+  	    <typeAlias alias="PubEmpExpandEntity" 	type="com.yogo.admin.entity.PubEmpExpandEntity" /> 
+  	    <typeAlias alias="TcmCmdrugsOrgEntity" 	type="com.yogo.admin.entity.TcmCmdrugsOrgEntity" />
+  	    <typeAlias alias="TcmCmdrugsEntity" 	type="com.yogo.admin.entity.TcmCmdrugsEntity" />
+  	    <typeAlias alias="PubOrgEntity" 	type="com.yogo.admin.entity.PubOrgEntity" />
+  	    <typeAlias alias="KtsysDictionaryEntity" 	type="com.yogo.admin.entity.KtsysDictionaryEntity" />
+  	    <typeAlias alias="PreListEntity" 	type="com.yogo.admin.entity.PreListEntity" />
+  	    <typeAlias alias="PrescriptionEntity" 	type="com.yogo.admin.entity.PrescriptionEntity" />
+    </typeAliases>  
+    <mappers>  
+        
+        
+        <mapper resource="sql-mapper/KTBaseUserMapper.xml" />
+        <mapper resource="sql-mapper/PubEmpMapper.xml" />
+        <mapper resource="sql-mapper/PubEmpExpandMapper.xml" />
+        <mapper resource="sql-mapper/TcmCmdrugsOrgMapper.xml" />
+        <mapper resource="sql-mapper/TcmCmdrugsMapper.xml" />
+        <mapper resource="sql-mapper/PubOrgMapper.xml" />
+        <mapper resource="sql-mapper/KtsysDictionaryMapper.xml" />
+        <mapper resource="sql-mapper/PreListMapper.xml" />
+        <mapper resource="sql-mapper/PrescriptionMapper.xml" />
+    </mappers>        
+
+</configuration>

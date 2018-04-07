@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="example.model.dao.UserExaminationMapper">
+
+	<resultMap id="BASE-RESULT" type="example.model.dataobject.UserExamination">
+        <result property="id" column="id" />
+        <result property="userId" column="user_id" />
+        <result property="examinationId" column="examination_id" />
+		<result property="examinationName" column="examination_name" />
+		<result property="orderId" column="order_id" />
+		<result property="prepayId" column="prepay_id" />
+		<result property="isDelete" column="is_delete" />
+		<result property="hasPayed" column="has_payed" />
+		<result property="payTime" column="pay_time" />
+		<result property="testCount" column="test_count" />
+		<result property="createTime" column="create_time" />
+        <result property="updateTime" column="update_time" />
+
+	</resultMap>
+
+	
+  	<insert id="insert" parameterType="example.model.dataobject.UserExamination">
+  		INSERT INTO user_examination ( 
+			user_id,examination_id,examination_name,create_time,update_time,order_id,prepay_id,is_delete,has_payed,pay_time,test_count
+  		) VALUES (
+			#{userId},#{examinationId},#{examinationName},#{createTime},#{updateTime},#{orderId},#{prepayId},#{isDelete},#{hasPayed},#{payTime},#{testCount}
+  		)   
+  		<selectKey resultType="Integer" keyProperty="id">    
+      		SELECT LAST_INSERT_ID()     
+		</selectKey> 
+  	</insert>
+  	
+  	<update id="update" parameterType="example.model.dataobject.UserExamination" >
+		UPDATE
+			user_examination
+		SET
+            <if test="id!=null"> id = #{id} </if>
+            <if test="userId!=null">, user_id = #{userId} </if>
+            <if test="examinationId!=null">, examination_id = #{examinationId} </if>
+		<if test="examinationName!=null">, examination_name = #{examinationName} </if>
+		<if test="createTime!=null">, create_time = #{createTime} </if>
+            <if test="updateTime!=null">, update_time = #{updateTime} </if>
+		<if test="isDelete!=null">, is_delete = #{isDelete} </if>
+		<if test="hasPayed!=null">, has_payed = #{hasPayed} </if>
+		<if test="payTime!=null">, pay_time = #{payTime} </if>
+		<if test="testCount!=null">, test_count = #{testCount} </if>
+		<if test="orderId!=null">, order_id = #{orderId} </if>
+		<if test="prepayId!=null">, prepay_id = #{prepayId} </if>
+
+		<where>
+			id = #{id}
+		</where>
+	</update>
+	
+	
+	<select id="getByKey" resultMap="BASE-RESULT">
+		SELECT * FROM
+			user_examination
+		<where>
+			id = #{key}
+		</where>
+	</select>
+	
+	<delete id="deleteByKey">
+		DELETE FROM
+			user_examination
+		<where>
+			id = #{key}
+		</where>
+	</delete>
+	
+	<select id="findEntitys" parameterType="map" resultMap="BASE-RESULT">
+		SELECT * FROM
+			user_examination
+		<where>
+			<include refid="compareParamColumns" />
+		</where>
+		<if test="param.orderByStr!=null">
+			order by ${param.orderByStr}
+		</if>
+		<if test="param.start!=null and param.pageNum!=null">LIMIT #{param.start},#{param.pageNum}</if>
+	</select>
+
+
+	<select id="getEntitysCount" parameterType="map" resultType="int">
+		SELECT count(*) FROM
+			user_examination
+		<where>
+			<include refid="compareParamColumns" />
+		</where>
+	</select>
+	
+	<sql id="compareParamColumns">
+		1
+        <if test="param.id!=null">
+            AND  id = #{param.id}
+        </if>
+        <if test="param.userId!=null">
+            AND  user_id = #{param.userId}
+        </if>
+        <if test="param.examinationId!=null">
+            AND  examination_id = #{param.examinationId}
+        </if>
+		<if test="param.examinationName!=null">
+			AND  examination_name = #{param.examinationName}
+		</if>
+        <if test="param.createTime!=null">
+            AND  create_time = #{param.createTime}
+        </if>
+        <if test="param.updateTime!=null">
+            AND  update_time = #{param.updateTime}
+        </if>
+		<if test="param.isDelete!=null">
+			AND  is_delete = #{param.isDelete}
+		</if>
+		<if test="param.hasPayed!=null">
+			AND  has_payed = #{param.hasPayed}
+		</if>
+		<if test="param.payTime!=null">
+			AND  pay_time = #{param.payTime}
+		</if>
+		<if test="param.payTime!=null">
+			AND  test_count = #{param.testCount}
+		</if>
+		<if test="param.orderId!=null">
+			AND  order_id = #{param.orderId}
+		</if>
+		<if test="param.prepayId!=null">
+			AND  prepay_id = #{param.prepayId}
+		</if>
+		<if test="param.canTest==1">
+			AND  to_days(pay_time) = to_days(now())
+		</if>
+	</sql>
+	
+</mapper>

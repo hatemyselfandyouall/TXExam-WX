@@ -1,0 +1,160 @@
+#set($layout="/WEB-INF/view/layout/main.vm")
+
+
+<div class="ch-container">
+    <div class="row">
+
+        <!-- left menu starts -->
+        <div class="col-sm-2 col-lg-2">
+            <div class="sidebar-nav">
+                <div class="nav-canvas">
+                    <div class="nav-sm nav nav-stacked">
+
+                    </div>
+                    <ul class="nav nav-pills nav-stacked main-menu">
+                        <li class="nav-header">Main</li>
+                        <li class="nav-header hidden-md">主功能</li>
+                        <li><a class="ajax-link" ><i
+                                class="glyphicon glyphicon-align-justify"></i><span> 列表</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--/span-->
+        <!-- left menu ends -->
+
+        <noscript>
+            <div class="alert alert-block col-md-12">
+                <h4 class="alert-heading">Warning!</h4>
+
+
+            </div>
+        </noscript>
+
+        <div id="content" class="col-lg-10 col-sm-10">
+            <!-- content starts -->
+            <div>
+                <ul class="breadcrumb">
+                    <li>
+                        <a href="/exam/exammanager.htm">主页</a>
+                    </li>
+                    <li>
+                        <a href="/exam/exammanager.htm">题库管理</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="row">
+                <div class="box col-md-12">
+                    <div class="box-inner">
+                        <div class="box-header well" data-original-title="">
+                            <h2><i class="glyphicon glyphicon-user"></i> 出题方案</h2 >
+
+                            <div class="box-icon">
+                                <a href="#" class="btn btn-setting btn-round btn-default"><i class="glyphicon glyphicon-cog"></i></a>
+                                <a href="#" class="btn btn-minimize btn-round btn-default"><i
+                                        class="glyphicon glyphicon-chevron-up"></i></a>
+                                <a href="#" class="btn btn-close btn-round btn-default"><i class="glyphicon glyphicon-remove"></i></a>
+                            </div>
+                        </div>
+                        <div class="box-content">
+                            <div class="alert alert-info"> <a href="http://datatables.net/" target="_blank"></a></div>
+                            <table class="table table-striped table-bordered bootstrap-datatable datatable responsive">
+                                <thead>
+                                <tr>
+                                    <th>章节数</th>
+                                    <th>题库名</th>
+##                                    <th>判断题数量</th>
+                                    <th>判断题出题量</th>
+##                                    <th>单选题数量</th>
+                                    <th>单选题出题量</th>
+##                                    <th>多选题数量</th>
+                                    <th>多选题出题量</th>
+##                                    <th>简答题数量</th>
+                                    <th>简答题出题量</th>
+                                    <th>操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    #set($count=1)
+                                    #set($i=0)
+                                    #foreach($foo in [1..$examination.chapterSize])
+                                    <tr>
+                                        <td>$count</td>
+                                        <td>$examination.name</td>
+##                                        <td><input type="text" class="form-control" id="judgeSize$count" placeholder="judgeSize" value="#if($!chapterExaminations.size()>=$count)$!chapterExaminations.get($i).judgeSize#end"></td>
+                                        <td><input type="text" class="form-control" id="judgeUse$count" placeholder="judgeUse" value="#if($!chapterExaminations.get($count))$!chapterExaminations.get($count).get(0).judgeUse#end"></td>
+##                                        <td><input type="text" class="form-control" id="singleSize$count" placeholder="singleSize" value="#if($!chapterExaminations.size()>=$count)$!chapterExaminations.get($i).singleSize#end"></td>
+                                        <td><input type="text" class="form-control" id="singleUse$count" placeholder="singleUse" value="#if($!chapterExaminations.get($count))$!chapterExaminations.get($count).get(0).singleUse#end"></td>
+##                                        <td><input type="text" class="form-control" id="multSize$count" placeholder="multSize" value="#if($!chapterExaminations.size()>=$count)$!chapterExaminations.get($i).multSize#end"></td>
+                                        <td><input type="text" class="form-control" id="multUse$count" placeholder="multUse" value="#if($!chapterExaminations.get($count))$!chapterExaminations.get($count).get(0).multUse#end"></td>
+##                                        <td><input type="text" class="form-control" id="saqSize$count" placeholder="saqSize" value="#if($!chapterExaminations.size()>=$count)$!chapterExaminations.get($i).saqSize#end"></td>
+                                        <td><input type="text" class="form-control" id="saqUse$count" placeholder="saqUse" value="#if($!chapterExaminations.get($count))$!chapterExaminations.get($count).get(0).saqUse#end"></td>
+                                        <td class="center">
+                                            <a class="btn btn-success" onclick="editExamination($count,$examination.id)" >
+                                                <i class="glyphicon glyphicon-zoom-in icon-white"></i>
+                                                保存
+                                            </a>
+                                        </td>
+                                    </tr>
+                                        #set($count=$count+1)
+                                        #set($i=$i+1)
+                                    #end
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!--/span-->
+
+            </div><!--/row-->
+
+
+
+
+
+            <!-- content ends -->
+        </div><!--/#content.col-md-0-->
+    </div><!--/fluid-row-->
+
+
+
+    <hr>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h3>Settings</h3>
+                </div>
+                <div class="modal-body">
+                    <p>Here settings can be configured...</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-default" data-dismiss="modal">Close</a>
+                    <a href="#" class="btn btn-primary" data-dismiss="modal">Save changes</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="row">
+        <p class="col-md-9 col-sm-9 col-xs-12 copyright">&copy; <a href="http://usman.it" target="_blank">Muhammad
+            Usman</a> 2012 - 2015</p>
+
+        <p class="col-md-3 col-sm-3 col-xs-12 powered-by">Powered by: <a
+                href="http://usman.it/free-responsive-admin-template">Charisma</a></p>
+    </footer>
+
+</div><!--/.fluid-container-->
+
+<!-- external javascript -->
+<script>
+
+
+</script>
+<script src="../js/exam/chapterExaminationManager.js"></script>

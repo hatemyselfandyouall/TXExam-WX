@@ -1,0 +1,356 @@
+#set($layout="/WEB-INF/view/default.vm")
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+    <meta name="generator" content="bd-mobcard">
+    <meta http-equiv="Cache-Control" content="no-cache">
+
+    <script src="../js/vendor/jquery-1.11.2.min.js"></script>
+    <script src="../js/exam/jquery.timer.js"></script>
+    <script src="../js/exam/main.js"></script>
+
+    <title>专业水平测验</title>
+
+    <link href="../css/exam/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+
+<div class="gztt" id='notice'>
+
+
+</div>
+
+    #set($sort=1)
+    #foreach($question in $judgeQuestions)
+    <div class="test">
+        <div class="score"><img src="../images/exam/test_bg.png" alt="" style="border:none;border-radius:0px;"/></div>
+        <div class="test_con">
+            <div class="item">
+                <div class="tit"><span>$sort.</span>$!question.content <span class="answerSpan" style="color: red;display: none"><img class="failImg" src="../images/exam/wrong.jpg"><img class="successImg judgeQuestions" src="../images/exam/right.jpg">#if($question.answerChoice==1)是 #else 否#end</span></div>
+                <div class="item_con">
+                    <ul>
+                            <li questionType="1">
+                                <input type="radio" name="test$sort" id="" class="rad"
+                                       value='1'/><span></span>是
+                            </li>
+                            <li questionType="1">
+                                <input type="radio" name="test$sort" id="" class="rad"
+                                   value='0'/><span></span>否
+                            </li>
+                        <li style="pointer-events: none;"></li>
+                        <li style="pointer-events: none;"></li>
+                        <li style="pointer-events: none;"></li>
+                        <li style="color: red;text-align:center;pointer-events: none;" ><span class="initTime"></span>|||<span class="restTime"></span></li>
+
+                    </ul>
+                    <div class="submit" style="display: none" ><button>继续</button></div>
+                    <input type="hidden" value="$question.answerChoice" questionType="1">
+                </div>
+            </div>
+        </div>
+    </div>
+        #set($sort=$sort+1)
+    #end
+    #foreach($question in $singleQuestions)
+    <div class="test">
+        <div class="score"><img src="../images/exam/test_bg.png" alt="" style="border:none;border-radius:0px;"/></div>
+        <div class="test_con">
+            <div class="item">
+                <div class="tit"><span>$sort.</span>$!question.content <span class="answerSpan" style="color: red;display: none"><img class="failImg" src="../images/exam/wrong.jpg"><img class="successImg " src="../images/exam/right.jpg">$!question.answerChoice</span></div>
+                <div class="item_con">
+                    <ul>
+                        #foreach($choice in $velocityUtil.sharpWord($!question.choice,"[|]"))
+                            <li questionType="2">
+                                <input type="radio" name="test$sort" id="" class="rad"
+                                       value='$velocityUtil.getChoice($choice)'/><span>$velocityUtil.getChoice($choice)</span>$choice
+                            </li>
+                        #end
+
+                    </ul>
+                    <div class="submit" style="display: none"><button>继续</button></div>
+                    <input type="hidden" value="$question.answerChoice" questionType="2">
+                </div>
+            </div>
+        </div>
+    </div>
+        #set($sort=$sort+1)
+    #end
+    #foreach($question in $multQuestions)
+    <div class="test">
+        <div class="score"><img src="../images/exam/test_bg.png" alt="" style="border:none;border-radius:0px;"/></div>
+        <div class="test_con">
+            <div class="item">
+                <div class="tit"><span>$sort.</span>$!question.content <span class="answerSpan" style="color: red;display: none"><img class="failImg" src="../images/exam/wrong.jpg"><img class="successImg" src="../images/exam/right.jpg">$!question.answerChoice</span></div>
+                <div class="item_con">
+                    <ul>
+                        #foreach($choice in $velocityUtil.sharpWord($!question.choice,"[|]"))
+                            <li questionType="3">
+                                <input type="checkbox" name="test$sort" id="" class="rad"
+                                       value='$velocityUtil.getChoice($choice)'/><span>$velocityUtil.getChoice($choice)</span>$choice
+                            </li>
+
+                        #end
+                    </ul>
+                    <div class="submit"><button>提交</button></div>
+                    <input type="hidden" value="$question.answerChoice" questionType="3" >
+                </div>
+            </div>
+        </div>
+    </div>
+        #set($sort=$sort+1)
+    #end
+
+    #foreach($question in $SAQuestions)
+    <div class="test">
+        <div class="score"><img src="../images/exam/test_bg.png" alt="" style="border:none;border-radius:0px;"/></div>
+        <div class="test_con">
+            <div class="item">
+                <div class="tit"><span>$sort.</span>$!question.content</div>
+                <div class="item_con">
+                    <textarea style="width: 100%;height: 100px"></textarea>
+
+                    <p style="width: 100%;height: 100px;color: red;" class="SAQAnswer">标准答案:$!question.answerContent</p>
+                    <div class="submit2"><button>提交</button></div>
+
+                    <input type="hidden" value="$question.answerChoice" questionType="4">
+                </div>
+            </div>
+        </div>
+    </div>
+        #set($sort=$sort+1)
+    #end
+
+<div class="test end" id='level1'>
+    <div class="score" ><img src="" alt=""/></div>
+    <div class="test_con">
+        <div class="answer_con">
+            <h1>恭喜您完成测试</h1>
+            <p>
+            <p>
+                <span>详细分析：</span><br/>
+                共30道判断题,您答对了15道,共20道单选题,您答对了11道,共15道多选题,请再接再厉!
+            </p>
+        </div>
+    </div>
+    <div class="share"><img src="../images/exam/share.png" alt="分享"/></div>
+</div>
+<input type="hidden" id="totalTime" value="$examination.examTime"/>
+<div class="share_b"><img src="../images/exam/fx.png" alt=""/></div>
+
+<!--<div class="guanzhu">
+  
+    <img src="../images/exam/ico_tc_bg.png" alt="关注"/>
+    </div>-->
+
+<div class="guanzhu1" id="guanzhu">	<div class="jt"><img src="../images/exam/jiantou.png" alt=""/></div>	 <p id="gz_p"> 关注书法科技,免费学习书法课程</p>
+    <div class="guanzhu_but"><a href="https://mp.weixin.qq.com/s?__biz=MzU4OTI4ODU3Mg==&mid=2247483658&idx=1&sn=f503e9bd07d60438d9193bd1c7718de2">关注微信：书法科技</a></div>
+</div>
+<input type="hidden" name='sumScore' id='sumScore' value="0">
+<input type="hidden" name='timeUp' id='timeUp' value="0">
+
+</body>
+<script type="text/javascript" >
+    $(function(){
+        $(".submit").click(function() {
+            checkAnswer2(this)
+        });
+        $(".submit2").click(function() {
+            checkAnswer3(this)
+        });
+        $('li').click(function(){
+            if($(this).attr('questionType')==3){
+                changeState($(this).find('input')[0]);
+                return;
+            }
+            checkAnswer(this,$(this).attr('questionType'))
+        });
+
+
+
+        function WeiXinShareBtn() {
+            if (typeof WeixinJSBridge == "undefined") {
+                alert("请先通过微信搜索线话英语并添加为好友，通过微信分享文章 :) ");
+            } else {
+                WeixinJSBridge.invoke('shareTimeline', {
+                    "title": "英语测试",
+                    "link": "http://wx.linewow.com/ceshi/index.html",
+                    "desc": "关注互联网创业",
+                    "img_url": "http://wx.linewow.com/ceshi/img/topimg.jpg"
+                });
+            }
+        }
+        $('.share').click(function(){
+//                WeiXinShareBtn();
+
+            $('.share_b').css('display','block');
+            location.href = "#title";
+        });
+
+        $('.share_b').click(function(){
+            $(this).css('display','none');
+        });
+        $('#close').click(function(){
+            $('.guanzhu1').css('display','none');
+        });
+
+    })
+</script>
+<script>
+
+
+
+    var maxScore='$!examination.judgeUse';
+    var judgeScore='$!examination.judgeScore';
+    var multScore='$!examination.multScore';
+    var singleScore='$!examination.singleScore';
+    var saqScore='$!examination.saqScore';
+    var judgeRight=0;
+    var judgeWrong=0;
+    var singleRight=0;
+    var singleWrong=0;
+    var multRight=0;
+    var multWrong=0;
+    var saqRight=0;
+    var saqWrong=0;
+    /**
+     * 多选框切换
+     * @param checkbox
+     */
+    function changeState(checkbox){
+        if(!$(checkbox).is(":checked")){
+            $(checkbox).prop("checked",true);
+        }else{
+            $(checkbox).prop("checked",false);
+        }
+    }
+    /**
+     * 处理判断及单选题答案
+     */
+    function checkAnswer(li,type){
+        $(li).attr("disabled",true);
+        var select=$(li).children(':radio').val();
+        var answer=$($($(li).parents('div')[0]).children(':hidden')[1]).val();
+        var sumScore=$('#sumScore').val();
+        var title=$($(li).parents('div')[0]).siblings('div')[0];
+        if(select==answer){
+            $('#sumScore').val(parseInt(sumScore)+1);
+        }else{
+            if(!$(li).hasClass('on')){
+            if(type==1){
+                judgeWrong++;
+            }else{
+                singleWrong++;
+            }
+            }
+            $(li).addClass('on');
+            showErrorMsg(title)
+            return;
+        }
+        if(!$(li).hasClass('on')){
+            if(type==1){
+                judgeRight++;
+            }else{
+                singleRight++;
+            }
+        }
+        $(li).addClass('on');
+        finnalExam(li,title)
+
+    }
+    /**
+     * 确认多选答案
+     * */
+    function checkAnswer2(submit){
+        $(submit).attr("disabled",true);
+        var select="";
+        var answer=$($($(submit).parents('div')[0]).children(':hidden')[0]).val();
+        var ul=$($(submit).parents('div')[0]).children('ul')[0];
+        var title=$($(submit).parents('div')[0]).siblings('div')[0];
+        $(ul).children('li').each(function (index, element){
+            var input=$(element).children('input')[0];
+            if($(input).is(":checked")){
+                select=select+"|"+$(input).val();
+            }
+        });
+        if(select!="|"+answer){
+            if(!$(submit).hasClass('answerd')){
+                $(submit).addClass('answerd');
+                multWrong++;
+            }
+            showErrorMsg(title)
+            return
+        }
+        if(!$(submit).hasClass('answerd')){
+            $(submit).addClass('answerd');
+            multRight++;
+        }
+        $(submit).attr("disabled",false);
+        finnalExam(submit,title)
+
+    }
+    /**
+     * 确认多选答案
+     * */
+    function checkAnswer3(submit){
+        finnalExam(submit)
+    }
+     /**
+     * 展示错误信息
+     * @param title
+     */
+    function showErrorMsg(title){
+        var anwserSpan=$(title).children('.answerSpan')[0];
+        var successImg=$(anwserSpan).children('.successImg')[0];
+         var failImg=$(anwserSpan).children('.failImg')[0];
+        $(anwserSpan).show();
+        $(successImg).hide();
+         $(failImg).show();
+     }
+
+    /**
+     * 展示错误信息
+     * @param title
+     */
+    function showRightMsg(title){
+        var anwserSpan=$(title).children('.answerSpan')[0];
+        var failImg=$(anwserSpan).children('.failImg')[0];
+        var successImg=$(anwserSpan).children('.successImg')[0];
+        $(anwserSpan).show();
+        $(failImg).hide();
+        $(successImg).show();
+
+
+    }
+
+    function finnalExam(temp,title){
+        if( $(temp).parents('div').next('div').hasClass('end')){
+            showResultPage();
+        }else{
+            showRightMsg(title);
+           sleep(temp,title)
+        }
+    }
+
+    function showResultPage(){
+        var judge=(judgeRight-judgeWrong)*judgeScore;
+        var mult=(multRight-multWrong)*multScore;
+        var single=(saqRight-singleWrong)*singleScore;
+        var score=judge+mult+single;
+        $('.test').hide()
+        $('#level1').css('display','block');
+        document.title="我在职业资格模拟测试中得到了"+score+"分，你能超过我吗?";
+        $('.guanzhu1').css('display','block');
+    }
+
+    function statisScore(){
+//        var singleSuccessCount=$('.successImg.judgeQuestions');
+//        console.log(singleSuccessCount.size())
+    }
+</script>
+</html>

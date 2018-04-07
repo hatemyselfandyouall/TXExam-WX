@@ -1,0 +1,86 @@
+.main{padding:5%;font-size:0.9em;}
+.main p{line-height:28px;text-indent: 25px;}
+.main p.last{text-indent: 0;}
+table{margin-top:15px;}
+table tr td{text-align:center;line-height:25px;border-bottom: 1px solid #ddd;line-height: 25px;background: #FEFCCE;border-right: 1px solid #ddd;}
+table tr td.last1{border-right: none;}
+table tr td.last2{border-bottom: none;}
+
+/*手机端news显示页面*/
+a.news_back{display:block;height: 35px;position: relative;width: 30%;background: #2EE2DF;margin:5px 0 5px 5%;}
+.news_back b{
+font-family: "黑体";
+display: block;
+height: 12px;
+width: 12px;
+border: #fff 1px solid;
+border-width: 2px 0px 0px 2px;
+transform: rotate(-45deg);
+-webkit-transform: rotate(-45deg);
+position: absolute;
+left: 50%;
+top: 50%;
+margin-top: -6px;}
+.main3{padding:0 5% 5% 5%;}
+.mobile_news h2.name{text-align:center;margin-bottom: 5px;padding-top: 5px;}
+.mobile_news p.info{color:#a5a5a5;text-align:center;line-height:40px;border-top: #2EE2DF 1px solid;}
+.mobile_news p img{display:block;margin:0 auto;width: 100%;}
+
+/*手机端自测量*/
+.main2{padding:0;}
+.mobile_news .title{background:#2EBAD3;color:#fff;text-align:center;line-height:60px;font-weight: normal;}
+.mobile_news p.zice{text-indent: 0;border-top:none;}
+.main2 h3.name{text-align: center;font-size: 24px;font-weight: normal;line-height: 55px;}
+.con a.open,.con a.next{background:#2EBAD3;width: 93.37%;margin:15px auto;display:block;line-height: 40px;color: #fff;text-align: center;
+border-radius: 5px;-webkit-border-radius: 5px;border: solid 1px #36A6BA;}
+.con2{padding-top:30px;}
+.con .control{text-indent: inherit;padding: 20px 0;text-align: center;}
+.con .control span{padding:0 10px;color: #2EBAD3;font-weight: bold;}
+.con .control span input.sex{margin-right: 5px;}
+.con .control span input.age{height:29px; line-height:29px;width: 25%;padding: 3px;border-radius: 5px;-webkit-border-radius: 5px;border: solid 1px #B8B8B8;}
+
+/*手机端下载页面*/
+.ios_main h3{color:#fff;font-weight:normal;background:#2EE2DF;line-height: 60px;
+text-align: center;}
+.ios_main img{display:block;margin:40px auto;}
+.ios_main a.ios_down{display:block;width:93.37%;margin:0 auto;line-height:40px;color: #fff;text-align: center;border-radius: 5px;-webkit-border-radius: 5px;
+border: solid 1px #3FCAE3;background:#2EE2DF;}
+
+/*咨询师列表\文章列表*/
+.psy_top{text-align:center;font-size:16px;line-height:50px;background:#2EE2DF;color:#fff;position: relative;}
+.psy_list li{border-bottom:1px solid #ddd;}
+.psy_list li a{display:block;position: relative;line-height: 45px;}
+a.left{
+font-family: "黑体";
+display: block;
+height: 12px;
+width: 12px;
+border: #fff 1px solid;
+border-width: 2px 0px 0px 2px;
+transform: rotate(-45deg);
+-webkit-transform: rotate(-45deg);
+position: absolute;
+left: 3%;
+top: 50%;
+margin-top: -6px;
+}
+b.right{
+font-family: "黑体";
+display: block;
+height: 12px;
+width: 12px;
+border: #2EE2DF solid;
+border-width: 1px 0px 0px 1px;
+transform: rotate(135deg);
+-webkit-transform: rotate(135deg);
+position: absolute;
+right: 3%;
+top: 50%;
+margin-top: -6px;
+}
+.psy_list li a span{padding-left:3%;display:inline-block;width:83%;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+
+
+/*核对学生信息*/
+.checkTable{width:90%;border-collapse: collapse;margin:0 auto 30px; }
+.checkTable tr td{background:none;border:1px solid #ddd;}

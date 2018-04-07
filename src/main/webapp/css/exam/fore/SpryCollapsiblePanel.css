@@ -1,0 +1,32 @@
+.collapsible{
+	background:#fff;
+	padding:40px 20px;
+}
+.CollapsiblePanel {
+	width: 750px;
+	margin-bottom: 40px;
+}
+
+.CollapsiblePanelTab{
+	cursor: pointer;
+	font-size: 18px;
+	text-shadow: 0 1px 0 white;
+	background: #fff url(../images/arrow_unclick.png) no-repeat 700px 20px;
+	border: 1px solid #dedede;
+	border-radius: 3px;
+	padding: 20px 40px;
+	color: #626B8A;
+}
+.CollapsiblePanelTab.hover{
+	background: #dedede url(../images/arrow_unclick.png) no-repeat 700px 20px;
+}
+.CollapsiblePanelTab.clicked{
+	background: #dedede url(../images/arrow_click.png) no-repeat 700px 20px;
+}
+.CollapsiblePanelContent {
+	display: none;
+	overflow: hidden;
+}
+.CollapsiblePanelContent .normalContent{
+	padding: 40px 40px 0px;
+}

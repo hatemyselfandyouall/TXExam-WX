@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="example.model.dao.ChapterExaminationMapper">
+
+	<resultMap id="BASE-RESULT" type="example.model.dataobject.ChapterExamination">
+        <result property="id" column="id" />
+        <result property="examinationId" column="examination_id" />
+        <result property="charpterId" column="charpter_id" />
+        <result property="judgeSize" column="judge_size" />
+        <result property="judgeUse" column="judge_use" />
+        <result property="singleSize" column="single_size" />
+        <result property="singleUse" column="single_use" />
+        <result property="multSize" column="mult_size" />
+        <result property="multUse" column="mult_use" />
+        <result property="saqSize" column="saq_size" />
+        <result property="saqUse" column="saq_use" />
+        <result property="isDelete" column="is_delete" />
+        <result property="createTime" column="create_time" />
+        <result property="updateTime" column="update_time" />
+
+	</resultMap>
+
+	
+  	<insert id="insert" parameterType="example.model.dataobject.ChapterExamination">
+  		INSERT INTO chapter_examination ( 
+			examination_id,charpter_id,judge_size,judge_use,single_size,single_use,mult_size,mult_use,saq_size,saq_use,is_delete,create_time,update_time			
+  		) VALUES (
+			#{examinationId},#{charpterId},#{judgeSize},#{judgeUse},#{singleSize},#{singleUse},#{multSize},#{multUse},#{saqSize},#{saqUse},#{isDelete},#{createTime},#{updateTime}		
+  		)   
+  		<selectKey resultType="Integer" keyProperty="id">    
+      		SELECT LAST_INSERT_ID()     
+		</selectKey> 
+  	</insert>
+  	
+  	<update id="update" parameterType="example.model.dataobject.ChapterExamination" >
+		UPDATE
+			chapter_examination
+		SET
+            <if test="id!=null"> id = #{id} </if>
+            <if test="examinationId!=null">, examination_id = #{examinationId} </if>
+            <if test="charpterId!=null">, charpter_id = #{charpterId} </if>
+            <if test="judgeSize!=null">, judge_size = #{judgeSize} </if>
+            <if test="judgeUse!=null">, judge_use = #{judgeUse} </if>
+            <if test="singleSize!=null">, single_size = #{singleSize} </if>
+            <if test="singleUse!=null">, single_use = #{singleUse} </if>
+            <if test="multSize!=null">, mult_size = #{multSize} </if>
+            <if test="multUse!=null">, mult_use = #{multUse} </if>
+            <if test="saqSize!=null">, saq_size = #{saqSize} </if>
+            <if test="saqUse!=null">, saq_use = #{saqUse} </if>
+            <if test="isDelete!=null">, is_delete = #{isDelete} </if>
+            <if test="createTime!=null">, create_time = #{createTime} </if>
+            <if test="updateTime!=null">, update_time = #{updateTime} </if>
+
+		<where>
+			id = #{id}
+		</where>
+	</update>
+	
+	
+	<select id="getByKey" resultMap="BASE-RESULT">
+		SELECT * FROM
+			chapter_examination
+		<where>
+			id = #{key}
+		</where>
+	</select>
+	
+	<delete id="deleteByKey">
+		DELETE FROM
+			chapter_examination
+		<where>
+			id = #{key}
+		</where>
+	</delete>
+	
+	<select id="findEntitys" parameterType="map" resultMap="BASE-RESULT">
+		SELECT * FROM
+			chapter_examination
+		<where>
+			<include refid="compareParamColumns" />
+		</where>
+		<if test="param.orderByStr!=null">
+			order by ${param.orderByStr}
+		</if>
+		<if test="param.start!=null and param.pageNum!=null">LIMIT #{param.start},#{param.pageNum}</if>
+	</select>
+
+
+	<select id="getEntitysCount" parameterType="map" resultType="int">
+		SELECT count(*) FROM
+			chapter_examination
+		<where>
+			<include refid="compareParamColumns" />
+		</where>
+	</select>
+	
+	<sql id="compareParamColumns">
+		1
+        <if test="param.id!=null">
+            AND  id = #{param.id}
+        </if>
+        <if test="param.examinationId!=null">
+            AND  examination_id = #{param.examinationId}
+        </if>
+        <if test="param.charpterId!=null">
+            AND  charpter_id = #{param.charpterId}
+        </if>
+        <if test="param.judgeSize!=null">
+            AND  judge_size = #{param.judgeSize}
+        </if>
+        <if test="param.judgeUse!=null">
+            AND  judge_use = #{param.judgeUse}
+        </if>
+        <if test="param.singleSize!=null">
+            AND  single_size = #{param.singleSize}
+        </if>
+        <if test="param.singleUse!=null">
+            AND  single_use = #{param.singleUse}
+        </if>
+        <if test="param.multSize!=null">
+            AND  mult_size = #{param.multSize}
+        </if>
+        <if test="param.multUse!=null">
+            AND  mult_use = #{param.multUse}
+        </if>
+        <if test="param.saqSize!=null">
+            AND  saq_size = #{param.saqSize}
+        </if>
+        <if test="param.saqUse!=null">
+            AND  saq_use = #{param.saqUse}
+        </if>
+        <if test="param.isDelete!=null">
+            AND  is_delete = #{param.isDelete}
+        </if>
+        <if test="param.createTime!=null">
+            AND  create_time = #{param.createTime}
+        </if>
+        <if test="param.updateTime!=null">
+            AND  update_time = #{param.updateTime}
+        </if>
+
+	</sql>
+	
+</mapper>

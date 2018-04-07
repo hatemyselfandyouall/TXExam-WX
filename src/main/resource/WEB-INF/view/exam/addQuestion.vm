@@ -1,0 +1,199 @@
+#set($layout="/WEB-INF/view/layout/main.vm")
+<!-- topbar ends -->
+<div class="ch-container">
+    <div class="row">
+
+        <!-- left menu starts -->
+        <div class="col-sm-2 col-lg-2">
+            <div class="sidebar-nav">
+                <div class="nav-canvas">
+                    <div class="nav-sm nav nav-stacked">
+
+                    </div>
+                    <ul class="nav nav-pills nav-stacked main-menu">
+                        <li class="nav-header">Main</li>
+                    ##                        <li><a class="ajax-link" href="index.html"><i class="glyphicon glyphicon-home"></i><span> Dashboard</span></a>
+                    ##                        </li>
+                    ##                        <li><a class="ajax-link" href="ui.html"><i class="glyphicon glyphicon-eye-open"></i><span> UI Features</span></a>
+                    ##                        </li>
+                    ##                        <li><a class="ajax-link" href="form.html"><i
+                    ##                                class="glyphicon glyphicon-edit"></i><span> Forms</span></a></li>
+                    ##                        <li><a class="ajax-link" href="chart.html"><i class="glyphicon glyphicon-list-alt"></i><span> Charts</span></a>
+                    ##                        </li>
+                    ##                        <li><a class="ajax-link" href="typography.html"><i class="glyphicon glyphicon-font"></i><span> Typography</span></a>
+                    ##                        </li>
+                    ##                        <li><a class="ajax-link" href="gallery.html"><i class="glyphicon glyphicon-picture"></i><span> Gallery</span></a>
+                    ##                        </li>
+                        <li class="nav-header hidden-md">主功能</li>
+                        <li><a class="ajax-link" ><i
+                                class="glyphicon glyphicon-align-justify"></i><span> 列表</span></a></li>
+                    ##                        <li class="accordion">
+                    ##                            <a href="#"><i class="glyphicon glyphicon-plus"></i><span> Accordion Menu</span></a>
+                    ##                            <ul class="nav nav-pills nav-stacked">
+                    ##                                <li><a href="#">Child Menu 1</a></li>
+                    ##                                <li><a href="#">Child Menu 2</a></li>
+                    ##                            </ul>
+                    ##                        </li>
+                    ##                        <li><a class="ajax-link" href="calendar.html"><i class="glyphicon glyphicon-calendar"></i><span> Calendar</span></a>
+                    ##                        </li>
+                    ##                        <li><a class="ajax-link" href="grid.html"><i
+                    ##                                class="glyphicon glyphicon-th"></i><span> Grid</span></a></li>
+                    ##                        <li><a href="tour.html"><i class="glyphicon glyphicon-globe"></i><span> Tour</span></a></li>
+                    ##                        <li><a class="ajax-link" href="icon.html"><i
+                    ##                                class="glyphicon glyphicon-star"></i><span> Icons</span></a></li>
+                    ##                        <li><a href="error.html"><i class="glyphicon glyphicon-ban-circle"></i><span> Error Page</span></a>
+                    ##                        </li>
+                    ##                        <li><a href="login.html"><i class="glyphicon glyphicon-lock"></i><span> Login Page</span></a>
+                    ##                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--/span-->
+        <!-- left menu ends -->
+
+        <noscript>
+            <div class="alert alert-block col-md-12">
+                <h4 class="alert-heading">Warning!</h4>
+
+                <p>You need to have <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a>
+                    enabled to use this site.</p>
+            </div>
+        </noscript>
+
+        <div id="content" class="col-lg-10 col-sm-10">
+            <!-- content starts -->
+            <div>
+                <ul class="breadcrumb">
+                    <li>
+                        <a href="/exam/exammanager.htm">主页</a>
+                    </li>
+                    <li>
+                        <a href="/exam/exammanager.htm">题库管理</a>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="row">
+                <div class="box col-md-12">
+                    <div class="box-inner">
+                        <div class="box-header well" data-original-title="">
+                            <h2><i class="glyphicon glyphicon-edit"></i>试题管理</h2>
+
+                            <div class="box-icon">
+                                <a href="#" class="btn btn-setting btn-round btn-default"><i
+                                        class="glyphicon glyphicon-cog"></i></a>
+                                <a href="#" class="btn btn-minimize btn-round btn-default"><i
+                                        class="glyphicon glyphicon-chevron-up"></i></a>
+                                <a href="#" class="btn btn-close btn-round btn-default"><i
+                                        class="glyphicon glyphicon-remove"></i></a>
+                            </div>
+                        </div>
+                        <div class="box-content">
+                            <div role="form">
+                                <div class="form-group">
+                                    <label for="content">试题所属题库</label>
+                                    <input type="text" class="form-control" id="examinationName" placeholder="examinationName" value="$!examination.name" readonly >
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">试题正文</label>
+                                    <input type="text" class="form-control" id="questionContent" placeholder="questionContent" value="$!question.content">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">试题类型</label>
+                                    <div class="controls">
+                                        <select id="questionType">
+                                            <option #if($!question.questionType==1) selected #end value="1">判断题</option>
+                                            <option #if($!question.questionType==2) selected #end  value="2">单选题</option>
+                                            <option #if($!question.questionType==3) selected #end   value="3">多选题</option>
+                                            <option #if($!question.questionType==4) selected #end   value="4">简答题</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">试题选项</label>
+                                    <input type="text" class="form-control" id="questionChoice" placeholder="questionChoice" value="$!question.choice">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">试题答案</label>
+                                    <input type="text" class="form-control" id="questionAnswerChoice" placeholder="questionAnswerChoice" value="$!question.answerChoice">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">试题答案解析</label>
+                                    <input type="text" class="form-control" id="questionAnswerDetail" placeholder="questionAnswerDetail" value="$!question.answerDetail">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">试题分数（简答题有效）</label>
+                                    <input type="text" class="form-control" id="questionScore" placeholder="questionScore" value="$!question.score">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">试题所属章节</label>
+                                    <select id="questionChapterId">
+                                        #foreach($foo in [1..$!examination.chapterSize])
+                                                <option #if($!question.chapterId==$foo) selected #end value="$foo">$foo</option>
+                                        #end
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">试题难度级别（1简单-2一般-3较难-4极难）</label>
+                                    <select id="questionHardRank">
+                                        <option #if($!question.hardRank==1) selected #end value="1">1</option>
+                                        <option #if($!question.hardRank==2) selected #end  value="2">2</option>
+                                        <option #if($!question.hardRank==3) selected #end   value="3">3</option>
+                                        <option #if($!question.hardRank==4) selected #end   value="4">4</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">是否为真题</label>
+                                    <select id="questionIsReal">
+                                        <option #if($!question.isReal==1) selected #end value="1">是</option>
+                                        <option #if($!question.isReal==0) selected #end  value="0">否</option>
+                                    </select>
+                                </div>
+                                <button  class="btn btn-default" style="color: red" onclick="submitQuestion('$!question.id','$!examination.id')">提交修改</button>
+                        </div>
+                    </div>
+                </div>
+                <!--/span-->
+            </div><!--/row-->
+            <!-- content ends -->
+        </div><!--/#content.col-md-0-->
+    </div><!--/fluid-row-->
+
+
+
+    <hr>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h3>Settings</h3>
+                </div>
+                <div class="modal-body">
+                    <p>Here settings can be configured...</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-default" data-dismiss="modal">Close</a>
+                    <a href="#" class="btn btn-primary" data-dismiss="modal">Save changes</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="row">
+        <p class="col-md-9 col-sm-9 col-xs-12 copyright">&copy; <a href="http://usman.it" target="_blank">Muhammad
+            Usman</a> 2012 - 2015</p>
+
+        <p class="col-md-3 col-sm-3 col-xs-12 powered-by">Powered by: <a
+                href="http://usman.it/free-responsive-admin-template">Charisma</a></p>
+    </footer>
+
+</div><!--/.fluid-container-->
+
+<script src="../js/exam/questionManager.js"></script>
+

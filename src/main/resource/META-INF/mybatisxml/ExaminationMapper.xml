@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="example.model.dao.ExaminationMapper">
+
+	<resultMap id="BASE-RESULT" type="example.model.dataobject.Examination">
+        <result property="id" column="id" />
+        <result property="name" column="name" />
+        <result property="introduce" column="introduce" />
+        <result property="totalSize" column="total_size" />
+        <result property="singleChoiceSize" column="single_choice_size" />
+        <result property="multChoiceSize" column="mult_choice_size" />
+        <result property="judgeSize" column="judge_size" />
+        <result property="saqSize" column="saq_size" />
+        <result property="totalScore" column="total_score" />
+        <result property="judgeScore" column="judge_score" />
+        <result property="singleScore" column="single_score" />
+        <result property="multScore" column="mult_score" />
+        <result property="saqScore" column="saq_score" />
+        <result property="judgeUse" column="judge_use" />
+        <result property="singleUse" column="single_use" />
+        <result property="multUse" column="mult_use" />
+        <result property="saqUse" column="saq_use" />
+        <result property="chapterSize" column="chapter_size" />
+        <result property="price" column="price" />
+        <result property="examTime" column="exam_time" />
+        <result property="isDelete" column="is_delete" />
+        <result property="chapterMinScore" column="chapter_min_score" />
+        <result property="chapterMaxScore" column="chapter_max_score" />
+        <result property="createTime" column="create_time" />
+        <result property="updateTime" column="update_time" />
+
+	</resultMap>
+
+	
+  	<insert id="insert" parameterType="example.model.dataobject.Examination">
+  		INSERT INTO examination ( 
+			name,introduce,price,exam_time,total_size,single_choice_size,mult_choice_size,judge_size,saq_size,total_score,judge_score,single_score,mult_score,saq_score,judge_use,single_use,mult_use,saq_use,chapter_size,is_delete,chapter_min_score,chapter_max_score,create_time,update_time
+  		) VALUES (
+			#{name},#{introduce},#{price},#{examTime},#{totalSize},#{singleChoiceSize},#{multChoiceSize},#{judgeSize},#{saqSize},#{totalScore},#{judgeScore},#{singleScore},#{multScore},#{saqScore},#{judgeUse},#{singleUse},#{multUse},#{saqUse},#{chapterSize},#{isDelete},#{chapterMinScore},#{chapterMaxScore},#{createTime},#{updateTime}
+  		)   
+  		<selectKey resultType="Integer" keyProperty="id">    
+      		SELECT LAST_INSERT_ID()     
+		</selectKey> 
+  	</insert>
+  	
+  	<update id="update" parameterType="example.model.dataobject.Examination" >
+		UPDATE
+			examination
+		SET
+            <if test="id!=null"> id = #{id} </if>
+            <if test="name!=null">, name = #{name} </if>
+        <if test="introduce!=null">, introduce = #{introduce} </if>
+        <if test="totalSize!=null">, total_size = #{totalSize} </if>
+        <if test="price!=null">, price = #{price} </if>
+        <if test="examTime!=null">, exam_time = #{examTime} </if>
+        <if test="singleChoiceSize!=null">, single_choice_size = #{singleChoiceSize} </if>
+            <if test="multChoiceSize!=null">, mult_choice_size = #{multChoiceSize} </if>
+            <if test="judgeSize!=null">, judge_size = #{judgeSize} </if>
+            <if test="saqSize!=null">, saq_size = #{saqSize} </if>
+            <if test="totalScore!=null">, total_score = #{totalScore} </if>
+            <if test="judgeScore!=null">, judge_score = #{judgeScore} </if>
+            <if test="singleScore!=null">, single_score = #{singleScore} </if>
+            <if test="multScore!=null">, mult_score = #{multScore} </if>
+            <if test="saqScore!=null">, saq_score = #{saqScore} </if>
+            <if test="judgeUse!=null">, judge_use = #{judgeUse} </if>
+            <if test="singleUse!=null">, single_use = #{singleUse} </if>
+            <if test="multUse!=null">, mult_use = #{multUse} </if>
+            <if test="saqUse!=null">, saq_use = #{saqUse} </if>
+            <if test="chapterSize!=null">, chapter_size = #{chapterSize} </if>
+            <if test="isDelete!=null">, is_delete = #{isDelete} </if>
+            <if test="chapterMinScore!=null">, chapter_min_score = #{chapterMinScore} </if>
+            <if test="chapterMaxScore!=null">, chapter_max_score = #{chapterMaxScore} </if>
+            <if test="createTime!=null">, create_time = #{createTime} </if>
+            <if test="updateTime!=null">, update_time = #{updateTime} </if>
+
+		<where>
+			id = #{id}
+		</where>
+	</update>
+	
+	
+	<select id="getByKey" resultMap="BASE-RESULT">
+		SELECT * FROM
+			examination
+		<where>
+			id = #{key}
+		</where>
+	</select>
+	
+	<delete id="deleteByKey">
+		DELETE FROM
+			examination
+		<where>
+			id = #{key}
+		</where>
+	</delete>
+	
+	<select id="findEntitys" parameterType="map" resultMap="BASE-RESULT">
+		SELECT * FROM
+			examination
+		<where>
+			<include refid="compareParamColumns" />
+		</where>
+		<if test="param.orderByStr!=null">
+			order by ${param.orderByStr}
+		</if>
+		<if test="param.start!=null and param.pageNum!=null">LIMIT #{param.start},#{param.pageNum}</if>
+	</select>
+
+
+	<select id="getEntitysCount" parameterType="map" resultType="int">
+		SELECT count(*) FROM
+			examination
+		<where>
+			<include refid="compareParamColumns" />
+		</where>
+	</select>
+	
+	<sql id="compareParamColumns">
+		1
+        <if test="param.id!=null">
+            AND  id = #{param.id}
+        </if>
+        <if test="param.name!=null">
+            AND  name = #{param.name}
+        </if>
+        <if test="param.introduce!=null">
+            AND  introduce = #{param.introduce}
+        </if>
+        <if test="param.totalSize!=null">
+            AND  total_size = #{param.totalSize}
+        </if>
+        <if test="param.price!=null">
+            AND  price = #{param.price}
+        </if>
+        <if test="param.examTime!=null">
+            AND  exam_time = #{examTime.price}
+        </if>
+        <if test="param.singleChoiceSize!=null">
+            AND  single_choice_size = #{param.singleChoiceSize}
+        </if>
+        <if test="param.multChoiceSize!=null">
+            AND  mult_choice_size = #{param.multChoiceSize}
+        </if>
+        <if test="param.judgeSize!=null">
+            AND  judge_size = #{param.judgeSize}
+        </if>
+        <if test="param.saqSize!=null">
+            AND  saq_size = #{param.saqSize}
+        </if>
+        <if test="param.totalScore!=null">
+            AND  total_score = #{param.totalScore}
+        </if>
+        <if test="param.judgeScore!=null">
+            AND  judge_score = #{param.judgeScore}
+        </if>
+        <if test="param.singleScore!=null">
+            AND  single_score = #{param.singleScore}
+        </if>
+        <if test="param.multScore!=null">
+            AND  mult_score = #{param.multScore}
+        </if>
+        <if test="param.saqScore!=null">
+            AND  saq_score = #{param.saqScore}
+        </if>
+        <if test="param.judgeUse!=null">
+            AND  judge_use = #{param.judgeUse}
+        </if>
+        <if test="param.singleUse!=null">
+            AND  single_use = #{param.singleUse}
+        </if>
+        <if test="param.multUse!=null">
+            AND  mult_use = #{param.multUse}
+        </if>
+        <if test="param.saqUse!=null">
+            AND  saq_use = #{param.saqUse}
+        </if>
+        <if test="param.chapterSize!=null">
+            AND  chapter_size = #{param.chapterSize}
+        </if>
+        <if test="param.isDelete!=null">
+            AND  is_delete = #{param.isDelete}
+        </if>
+        <if test="param.chapterMinScore!=null">
+            AND  chapter_min_score = #{param.chapterMinScore}
+        </if>
+        <if test="param.chapterMaxScore!=null">
+            AND  chapter_max_score = #{param.chapterMaxScore}
+        </if>
+        <if test="param.createTime!=null">
+            AND  create_time = #{param.createTime}
+        </if>
+        <if test="param.updateTime!=null">
+            AND  update_time = #{param.updateTime}
+        </if>
+
+	</sql>
+	
+</mapper>

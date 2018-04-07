@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="example.model.dao.QuestionMapper">
+
+	<resultMap id="BASE-RESULT" type="example.model.dataobject.Question">
+        <result property="id" column="id" />
+        <result property="examinationId" column="examination_id" />
+        <result property="questionType" column="question_type" />
+        <result property="content" column="content" />
+        <result property="choice" column="choice" />
+        <result property="answerChoice" column="answer_choice" />
+        <result property="answerContent" column="answer_content" />
+        <result property="answerDetail" column="answer_detail" />
+        <result property="score" column="score" />
+        <result property="chapterId" column="chapter_id" />
+        <result property="chapterName" column="chapter_name" />
+        <result property="hardRank" column="hard_rank" />
+        <result property="isReal" column="is_real" />
+        <result property="isDelete" column="is_delete" />
+        <result property="createTime" column="create_time" />
+        <result property="updateTime" column="update_time" />
+
+	</resultMap>
+
+	
+  	<insert id="insert" parameterType="example.model.dataobject.Question">
+  		INSERT INTO question ( 
+			examination_id,question_type,content,choice,answer_choice,answer_content,answer_detail,score,chapter_id,chapter_name,hard_rank,is_real,is_delete,create_time,update_time			
+  		) VALUES (
+			#{examinationId},#{questionType},#{content},#{choice},#{answerChoice},#{answerContent},#{answerDetail},#{score},#{chapterId},#{chapterName},#{hardRank},#{isReal},#{isDelete},#{createTime},#{updateTime}		
+  		)   
+  		<selectKey resultType="Integer" keyProperty="id">    
+      		SELECT LAST_INSERT_ID()     
+		</selectKey> 
+  	</insert>
+  	
+  	<update id="update" parameterType="example.model.dataobject.Question" >
+		UPDATE
+			question
+		SET
+            <if test="id!=null"> id = #{id} </if>
+            <if test="examinationId!=null">, examination_id = #{examinationId} </if>
+            <if test="questionType!=null">, question_type = #{questionType} </if>
+            <if test="content!=null">, content = #{content} </if>
+            <if test="choice!=null">, choice = #{choice} </if>
+            <if test="answerChoice!=null">, answer_choice = #{answerChoice} </if>
+            <if test="answerContent!=null">, answer_content = #{answerContent} </if>
+            <if test="answerDetail!=null">, answer_detail = #{answerDetail} </if>
+            <if test="score!=null">, score = #{score} </if>
+            <if test="chapterId!=null">, chapter_id = #{chapterId} </if>
+            <if test="chapterName!=null">, chapter_name = #{chapterName} </if>
+            <if test="hardRank!=null">, hard_rank = #{hardRank} </if>
+            <if test="isReal!=null">, is_real = #{isReal} </if>
+            <if test="isDelete!=null">, is_delete = #{isDelete} </if>
+            <if test="createTime!=null">, create_time = #{createTime} </if>
+            <if test="updateTime!=null">, update_time = #{updateTime} </if>
+
+		<where>
+			id = #{id}
+		</where>
+	</update>
+
+    <delete id="deleteQuestionsByExaminationId" parameterType="example.model.dataobject.Question" >
+        delete
+        from
+        question
+        <where>
+            examination_id = #{examinationId}
+        </where>
+    </delete>
+
+	<select id="getByKey" resultMap="BASE-RESULT">
+		SELECT * FROM
+			question
+		<where>
+			id = #{key}
+		</where>
+	</select>
+	
+	<delete id="deleteByKey">
+		DELETE FROM
+			question
+		<where>
+			id = #{key}
+		</where>
+	</delete>
+	
+	<select id="findEntitys" parameterType="map" resultMap="BASE-RESULT">
+		SELECT * FROM
+			question
+		<where>
+			<include refid="compareParamColumns" />
+		</where>
+		<if test="param.orderByStr!=null">
+			order by ${param.orderByStr}
+		</if>
+		<if test="param.start!=null and param.pageNum!=null">LIMIT #{param.start},#{param.pageNum}</if>
+	</select>
+
+
+	<select id="getEntitysCount" parameterType="map" resultType="int">
+		SELECT count(*) FROM
+			question
+		<where>
+			<include refid="compareParamColumns" />
+		</where>
+	</select>
+	
+	<sql id="compareParamColumns">
+		1
+        <if test="param.id!=null">
+            AND  id = #{param.id}
+        </if>
+        <if test="param.examinationId!=null">
+            AND  examination_id = #{param.examinationId}
+        </if>
+        <if test="param.questionType!=null">
+            AND  question_type = #{param.questionType}
+        </if>
+        <if test="param.content!=null">
+            AND  content = #{param.content}
+        </if>
+        <if test="param.choice!=null">
+            AND  choice = #{param.choice}
+        </if>
+        <if test="param.answerChoice!=null">
+            AND  answer_choice = #{param.answerChoice}
+        </if>
+        <if test="param.answerContent!=null">
+            AND  answer_content = #{param.answerContent}
+        </if>
+        <if test="param.answerDetail!=null">
+            AND  answer_detail = #{param.answerDetail}
+        </if>
+        <if test="param.score!=null">
+            AND  score = #{param.score}
+        </if>
+        <if test="param.chapterId!=null">
+            AND  chapter_id = #{param.chapterId}
+        </if>
+        <if test="param.chapterName!=null">
+            AND  chapter_name = #{param.chapterName}
+        </if>
+        <if test="param.hardRank!=null">
+            AND  hard_rank = #{param.hardRank}
+        </if>
+        <if test="param.isReal!=null">
+            AND  is_real = #{param.isReal}
+        </if>
+        <if test="param.isDelete!=null">
+            AND  is_delete = #{param.isDelete}
+        </if>
+        <if test="param.createTime!=null">
+            AND  create_time = #{param.createTime}
+        </if>
+        <if test="param.updateTime!=null">
+            AND  update_time = #{param.updateTime}
+        </if>
+
+	</sql>
+	
+</mapper>

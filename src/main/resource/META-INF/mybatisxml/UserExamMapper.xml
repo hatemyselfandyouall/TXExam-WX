@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="example.model.dao.UserExamMapper">
+
+	<resultMap id="BASE-RESULT" type="example.model.dataobject.UserExam">
+        <result property="id" column="id" />
+        <result property="userId" column="user_id" />
+        <result property="imgPath" column="img_path" />
+        <result property="imgType" column="img_type" />
+        <result property="exSize" column="ex_size" />
+        <result property="createTime" column="create_time" />
+        <result property="updateTime" column="update_time" />
+
+	</resultMap>
+
+	
+  	<insert id="insert" parameterType="example.model.dataobject.UserExam">
+  		INSERT INTO user_exam ( 
+			user_id,img_path,img_type,ex_size,create_time,update_time			
+  		) VALUES (
+			#{userId},#{imgPath},#{imgType},#{exSize},#{createTime},#{updateTime}		
+  		)   
+  		<selectKey resultType="Integer" keyProperty="id">    
+      		SELECT LAST_INSERT_ID()     
+		</selectKey> 
+  	</insert>
+  	
+  	<update id="update" parameterType="example.model.dataobject.UserExam" >
+		UPDATE
+			user_exam
+		SET
+            <if test="id!=null"> id = #{id} </if>
+            <if test="userId!=null">, user_id = #{userId} </if>
+            <if test="imgPath!=null">, img_path = #{imgPath} </if>
+            <if test="imgType!=null">, img_type = #{imgType} </if>
+            <if test="exSize!=null">, ex_size = #{exSize} </if>
+            <if test="createTime!=null">, create_time = #{createTime} </if>
+            <if test="updateTime!=null">, update_time = #{updateTime} </if>
+
+		<where>
+			id = #{id}
+		</where>
+	</update>
+	
+	
+	<select id="getByKey" resultMap="BASE-RESULT">
+		SELECT * FROM
+			user_exam
+		<where>
+			id = #{key}
+		</where>
+	</select>
+	
+	<delete id="deleteByKey">
+		DELETE FROM
+			user_exam
+		<where>
+			id = #{key}
+		</where>
+	</delete>
+	
+	<select id="findEntitys" parameterType="map" resultMap="BASE-RESULT">
+		SELECT * FROM
+			user_exam
+		<where>
+			<include refid="compareParamColumns" />
+		</where>
+		<if test="param.orderByStr!=null">
+			order by ${param.orderByStr}
+		</if>
+		<if test="param.start!=null and param.pageNum!=null">LIMIT #{param.start},#{param.pageNum}</if>
+	</select>
+
+
+	<select id="getEntitysCount" parameterType="map" resultType="int">
+		SELECT count(*) FROM
+			user_exam
+		<where>
+			<include refid="compareParamColumns" />
+		</where>
+	</select>
+	
+	<sql id="compareParamColumns">
+		1
+        <if test="param.id!=null">
+            AND  id = #{param.id}
+        </if>
+        <if test="param.userId!=null">
+            AND  user_id = #{param.userId}
+        </if>
+        <if test="param.imgPath!=null">
+            AND  img_path = #{param.imgPath}
+        </if>
+        <if test="param.imgType!=null">
+            AND  img_type = #{param.imgType}
+        </if>
+        <if test="param.exSize!=null">
+            AND  ex_size = #{param.exSize}
+        </if>
+        <if test="param.createTime!=null">
+            AND  create_time = #{param.createTime}
+        </if>
+        <if test="param.updateTime!=null">
+            AND  update_time = #{param.updateTime}
+        </if>
+
+	</sql>
+	
+</mapper>

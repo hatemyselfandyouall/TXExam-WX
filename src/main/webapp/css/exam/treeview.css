@@ -1,0 +1,47 @@
+.treeList {
+  width: 225px!important;
+  margin-left:0px!important;
+  margin-right:20px;
+}
+.table_list{margin-lefT:0px!important}
+.list-group {
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+.list-group-item:first-child {
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+}
+.list-group-item {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  margin-bottom: -1px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+}
+.glyphicon-minus:before {
+  content: "\2212";
+}
+.glyphicon-stop:before {
+  content: "\e074";
+}
+.glyphicon-plus:before {
+  content: "\2b";
+}
+
+@media (max-width: 1732px) {
+	.table_list{
+		width:75%!important
+	}
+}

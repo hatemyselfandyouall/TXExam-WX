@@ -1,0 +1,48 @@
+ 
+package packageName.model;
+
+import java.util.List;
+import java.util.Map;
+import java.lang.Integer;
+import org.apache.ibatis.annotations.Param;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import packageName.dao.ClassNameDao;
+import packageName.entity.ClassNameEntity;
+
+ 
+
+@Component
+public class ClassNameModel  implements IModel{
+
+	@Autowired
+	private ClassNameDao dao;
+	
+	public Integer insert(Object entity){
+		return dao.insert((ClassNameEntity)entity);
+	}
+
+	public Integer update(Object entity){
+		return dao.update((ClassNameEntity)entity);
+	}
+	
+	public Integer deleteByKey( String key){
+		return dao.deleteByKey(key);
+	}
+	
+	public ClassNameEntity getByKey( String key){
+		return dao.getByKey(key);
+	}
+	 
+	public List<ClassNameEntity> findEntitys(Map<String ,Object>  param){
+		return dao.findEntitys(param);
+	}
+	public Integer getEntitysCount(Map<String ,Object>  param){
+		return dao.getEntitysCount(param);
+	}
+	 
+
+}
+
+ 

@@ -1,0 +1,186 @@
+.card_footer_img{
+	overflow: visible;
+}
+.card_footer_img img{
+	width: 25px;
+	vertical-align: middle;
+	margin-right: 4px;
+}
+/**********会员卡主页**********/
+.index_card{
+	margin: 22px auto 0;
+	position: relative;
+	width: 280px;
+}
+.index_card_box{
+	width: 267px;
+	height: 159px;
+	margin: 0 auto;
+	position: relative;
+	text-align: left;
+}
+.index_mask{
+	display: inline-block;
+	position: absolute;
+	width: 280px;
+	height: 115px;
+	top: 78px;
+	left: 0;
+	z-index: 3;
+	background: url("/images/memberMobile/msk.png") no-repeat -20px 0;
+	-webkit-background-size: 320px 128px;
+	background-size: 320px 128px;
+}
+.index_mask .explain{
+	line-height: 22px;
+	margin: 30px auto 10px;
+	padding: 0 30px;
+	text-align: center;
+}
+.index_mask .explain .index_tip {
+	display: inline-block;
+	font-size: 12px;
+	text-shadow: 0 1px #FFFFFF;
+}
+.index_cardbg {
+	height: 159px;
+	width: 267px;
+	position: absolute;
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+	-moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+	top: 0;left: 0;
+	z-index: 1;
+}
+.index_cardlogo{
+	max-width: 65%;
+    max-height: 50%;
+	position: absolute;
+	top: 8px;
+	left: 5px;
+	z-index: 2;
+}
+.index_title{
+	position: absolute;
+	right: 10px;top: 7px;
+	margin: 0 ;
+	text-shadow: 0 1px rgba(255, 255, 255, 0.2);
+	color: #000000;
+	font-size: 14px;
+	line-height: 25px;
+	text-align: right;
+	font-weight: normal;
+	z-index: 2;
+}
+.index_number{
+	position: absolute;
+	left: 0;top: 115px;right:12px;
+	height: 40px;
+	text-align: right;
+	line-height: 24px;
+	color: #000000;
+	font-size: 16px;
+	font-weight: bold;
+	text-shadow: 0 1px rgba(255, 255, 255, 0.2);
+	z-index: 2;
+}
+.index_numbertitle{
+	display: block;
+	text-align: right;
+	line-height: 14px;
+	font-size: 14px;
+	font-weight: normal;
+	font-style: normal;
+}
+.index_explain{
+	width: 100%;
+	line-height: 36px;
+	text-align: center;
+	margin: 0 auto;
+	padding: 0;
+}
+.index_explain span{
+	font-size: 14px;
+	color: #000;
+	text-shadow: 0 1px #fff;
+	padding-left: 20px;
+	display: inline-block;
+	background: url("/images/memberMobile/icons/show.jpg") no-repeat 0 50%;
+	background-size: 13px 14.5px;
+}
+/*优惠券*/
+.coupon_cont{
+	margin:0 auto;
+	width:240px;
+	height:302px;
+	background:url("/images/memberMobile/coupon_bg.jpg") top center no-repeat;
+	overflow: hidden;
+	border:1px solid red;
+	position: relative;
+}
+.coupon_subtitle{
+	font-weight: normal;
+	font-size: 14px;
+}
+.coupon_desc{
+	font-size: 14px;
+	background: #ededed;
+	margin-top: 10px;
+}
+.coupon_desc_title{
+	font-weight: bold;
+}
+.coupon_num{
+	width: 100%;
+	background: url("/images/memberMobile/coupon.png") center -140px no-repeat;
+	text-align: center;
+	line-height: 24px;
+	color:#fff;
+	margin-top: 20px;
+}
+.coupon_ewm{
+	width: 100%;
+	height: 150px;
+	text-align: center;
+	margin: 5px auto 0;
+}
+.coupon_ewm img{
+	width: 150px;
+}
+.coupon_explain{
+	font-size: 14px;
+	line-height: 20px;
+	text-align: center;
+	text-shadow: 0 1px #fff;
+	color: #000;
+	margin-top: 5px;
+}
+.coupon_cover{
+	width: 100%;
+	height:135px;
+	background:url("/images/memberMobile/coupon.png") no-repeat;
+	position: absolute;
+	left:0;bottom: 0;
+	z-index: 1;
+}
+/*地图*/
+.address_body,.address_container,.address_map{
+	width:100%;
+	height:95%;
+}
+.address_map{
+	overflow: hidden;
+
+}
+
+/*会员卡提示页*/
+.tishi{padding:0;border-radius: 10px;}
+.tishi h3.top{background:linear-gradient(#fff,#eee);border-bottom: 1px solid #aaa;margin: 0;line-height: 40px;text-align: center;}
+.tishi p{text-align: center;}
+.ui-body-c a.back_home{display:inline-block;line-height:40px;width:100px;background-image: linear-gradient(#444,#2d2d2d);
+color:#fff;text-decoration: none;text-align: center;font-weight: normal;border-radius: 3px;text-shadow: none;}
+.back_home_out{text-align: center;margin-top:10px;}
+.ui-body-c a.back_home:hover,.ui-body-c a.back_home:visited{color:#fff;}

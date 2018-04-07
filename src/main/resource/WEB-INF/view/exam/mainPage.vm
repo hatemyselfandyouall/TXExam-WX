@@ -1,0 +1,279 @@
+#set($layout="/WEB-INF/view/default.vm")
+
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1 maximum-scale=2, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Add to Home">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-rim-auto-match" content="none">
+    <title>测试打分页面</title>
+    <meta name="keywords" content="首汽约车—用户调查">
+    <meta name="description" content="首汽约车—用户调查">
+    <meta name="Copyright" content="首汽约车—用户调查">
+    <meta name="author" content="首汽约车—用户调查">
+    <!-- 网站的ico图标 -->
+    <link rel="shortcut icon" href="img/favicon.jpg" type="image/x-icon">
+    <link href="../css/exam/public.css" rel="stylesheet" type="text/css">
+    <link href="../css/exam/question.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="../js/exam/vue.min.js"></script>
+    <script src="../js/vendor/jquery-1.11.2.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="js/html5.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+        h2 {
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+<!-- ====================================loading -->
+<section id="loading"></section>
+<!-- ====================================页面开始 -->
+<!--登录-->
+<section class="question">
+    <header class="que_head">
+    </header>
+    <h1>一 判断题(共$!examination.judgeSize道题,每题$!examination.judgeScore分)</h1>
+    <ul>
+        #set($sort=1)
+        #foreach($question in $judgeQuestions)
+            <li class="que_ra que_ac" answer="$question.answerChoice" questionType="1">
+                <h2>$sort $!question.content ( ) <span class="answerSpan" style="color: red;display: none"><img class="failImg" src="../images/exam/wrong.jpg"><img class="successImg" src="../images/exam/right.jpg">#if($question.answerChoice==1)是 #else 否#end</span></h2>
+                <label class="que2_01" choice="1">
+                    <input type="radio" name="que2" class="que"/>
+                    <span>是</span>
+                    <i class="icon_ra"></i>
+                </label>
+                <label class="que2_01" choice="0">
+                    <input type="radio" name="que2" class="que"/>
+                    <span>否</span>
+                    <i class="icon_ra"></i>
+                </label>
+            </li>
+            #set($sort=$sort+1)
+        #end
+    </ul>
+    <h1>二 单选题(共$!examination.singleChoiceSize道题,每题$!examination.singleScore分)</h1>
+    <ul>
+        #set($sort=1)
+        #foreach($question in $singleQuestions)
+            <li class="que_ra que_ac" answer="$question.answerChoice" questionType="2">
+                <h2>$sort $!question.content ( ) <span class="answerSpan" style="color: red;display: none"><img
+                        class="failImg" src="../images/exam/wrong.jpg"><img class="successImg"
+                                                                            src="../images/exam/right.jpg">$!question.answerChoice</span>
+                </h2>
+                #foreach($choice in $velocityUtil.sharpWord($!question.choice,"[|]"))
+                    <label class="que2_01" choice="$velocityUtil.getChoice($choice)">
+                        <input type="radio" name="que2" class="que"/>
+                        <span>$choice</span>
+                        <i class="icon_ra"></i>
+                    </label>
+                #end
+            </li>
+            #set($sort=$sort+1)
+        #end
+    </ul>
+    <h1>三 多选题(共$!examination.multChoiceSize道题,每题$!examination.multScore分)</h1>
+    <ul>
+        #set($sort=1)
+        #foreach($question in $multQuestions)
+
+        <li class="que_chex que_ac" answer="$question.answerChoice" questionType="3">
+            <h2>$sort $!question.content ( ) <span class="answerSpan" style="color: red;display: none"><img
+                    class="failImg" src="../images/exam/wrong.jpg"><img class="successImg"
+                                                                        src="../images/exam/right.jpg">$!question.answerChoice</span>
+            </h2>
+            #foreach($choice in $velocityUtil.sharpWord($!question.choice,"[|]"))
+                <input type="checkbox" class="qu_chex" id="q1"/>
+                <label class="que2_01" for="q1" choice="$velocityUtil.getChoice($choice)">
+                    <span>$!choice</span>
+                    <i class="icon_chex"></i>
+                </label>
+            #end
+            #set($sort=$sort+1)
+        #end
+    </ul>
+    <h1>三 简答题(共$!examination.saqSize道题,总分$!examination.saqScore分)</h1>
+    <ul>
+        #set($sort=1)
+        #foreach($question in $SAQuestions)
+
+        <li class="que_chex que_ac" questionType="4">
+            <h2>$sort $!question.content ( )</h2>
+            <textarea style="width: 100%;height: 100px"></textarea>
+            <p style="width: 100%;height: 100px;color: red;display: none" class="SAQAnswer">标准答案:$!question.answerContent</p>
+
+            #set($sort=$sort+1)
+        #end
+    </ul>
+    <a id="submitExam" href="javascript:;" class="que_receive tc">完成测试</a>
+
+
+</section>
+<!--弹出层-->
+<article id="tip">
+    <div class="pack pack_yl">
+        <p class="tc"></p>
+        <a href="#">
+            <img src="../images/exam/que_close.png">
+        </a>
+    </div>
+</article>
+<!-- 网站要用到的一些类库 -->
+
+<script type="text/javascript">
+
+    var checkPhone = function (a) {
+        var patrn = /^((?:13|15|18|14|17)\d{9}|0(?:10|2\d|[3-9]\d{2})[1-9]\d{6,7})$/;
+        if (!patrn.exec(a)) return false;
+        return true;
+    };
+    $(window).on("load", function () {
+        $("#loading").fadeOut();
+    })
+    // ========================================浮层控制
+    $("#tip .pack a").on("click", function () {
+        $("#tip").fadeOut()
+        $("#tip .pack p").html("")
+        return false;
+    })
+
+    function alerths(str) {
+        $("#tip").fadeIn()
+        $("#tip .pack p").html(str)
+        return false;
+    }
+    /*判断单选框选中状态，并且父级添加active*/
+    $(".question ul .que_ra label").click(function () {
+        $(this).addClass("icon_raa").siblings().removeClass("icon_raa");
+        $(this).parent().addClass("active");
+    });
+    /*判断复选框选中状态，并且父级添加删除active*/
+    $(".question ul .que_chex label").click(function () {
+        if ($(this).hasClass("icon_chexa")) {
+            $(this).removeClass("icon_chexa");
+        } else {
+            $(this).addClass("icon_chexa");
+        }
+        ;
+        if ($(this).parent().children().hasClass("icon_chexa")) {
+            $(this).parent().addClass("active");
+        } else {
+            $(this).parent().removeClass("active");
+        }
+        ;
+        /*return false;*/
+    })
+    /*判断正误*/
+    $(".que_receive").on("click", function () {
+        var ss = $('.que_ac').map(function () {
+            /**
+             * 判断题处理
+             */
+            if ($(this).attr("questionType") == 1) {
+                var answer = $(this).attr("answer");
+                var answerSpan = ($(this).find("span")[0]);
+                if ($(this).hasClass("active")) {
+                    $(this).find("label").each(function (index, element) {
+                        if ($(element).is('.icon_raa')) {
+                            console.log($(element).attr('choice') + answer)
+                            if ($(element).attr('choice') == answer) {
+                                $(answerSpan).show();
+                                $($(answerSpan).find(".failImg")[0]).hide();
+                                $($(answerSpan).find(".successImg")[0]).show();
+                            } else {
+                                $(answerSpan).show();
+                                $($(answerSpan).find(".failImg")[0]).show();
+                                $($(answerSpan).find(".successImg")[0]).hide()
+                            }
+                        }
+                    });
+                }  else {
+                    $(answerSpan).show();
+                    $($(answerSpan).find(".failImg")[0]).show();
+                    $($(answerSpan).find(".successImg")[0]).hide()
+                }
+            }
+            /**
+             * 单选题处理
+             */
+            if ($(this).attr("questionType") == 2) {
+                var answer = $(this).attr("answer");
+                var answerSpan = ($(this).find("span")[0]);
+                if ($(this).hasClass("active")) {
+                    $(this).find("label").each(function (index, element) {
+                        if ($(element).is('.icon_raa')) {
+                            console.log($(element).attr('choice') + answer)
+                            if ($(element).attr('choice') == answer) {
+                                $(answerSpan).show();
+                                $($(answerSpan).find(".failImg")[0]).hide();
+                                $($(answerSpan).find(".successImg")[0]).show();
+                            } else {
+                                $(answerSpan).show();
+                                $($(answerSpan).find(".failImg")[0]).show();
+                                $($(answerSpan).find(".successImg")[0]).hide()
+                            }
+                        }
+                    });
+                } else {
+                    $(answerSpan).show();
+                    $($(answerSpan).find(".failImg")[0]).show();
+                    $($(answerSpan).find(".successImg")[0]).hide()
+                }
+            }
+            /**
+             * 多选题处理
+             */
+            if ($(this).attr("questionType") == 3) {
+                var answer = $(this).attr("answer");
+                var answerSpan = ($(this).find("span")[0]);
+                if ($(this).hasClass("active")) {
+                    var result = "";
+                    $(this).find("label").each(function (index, element) {
+                        if ($(element).is('.icon_chexa')) {
+                            result = result + "|" + $(element).attr("choice");
+                        }
+                    });
+                    if (result=="|"+answer) {
+                        console.log("true")
+                        $(answerSpan).show();
+                        $($(answerSpan).find(".failImg")[0]).hide();
+                        $($(answerSpan).find(".successImg")[0]).show();
+                    } else {
+                        $(answerSpan).show();
+                        $($(answerSpan).find(".failImg")[0]).show();
+                        $($(answerSpan).find(".successImg")[0]).hide()
+                    }
+
+                } else {
+                    $(answerSpan).show();
+                    $($(answerSpan).find(".failImg")[0]).show();
+                    $($(answerSpan).find(".successImg")[0]).hide()
+                }
+            }
+        }).
+            get().join();
+        /**
+         * 简答题处理
+         */
+        $(".SAQAnswer").show();
+        $("#submitExam").html("再次测试");
+        return;
+        })
+        function checkJudge(question) {
+
+        }
+</script>
+</body>
+
+</html>

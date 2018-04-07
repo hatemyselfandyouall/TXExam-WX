@@ -1,0 +1,97 @@
+﻿/*模板公用*/
+html {
+    color: #000;
+    background: #fff;}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0
+}
+body{
+    color: #333;
+    font-family: "Microsoft Yahei", "simHei", Helvetica, Arial, sans-serif ;
+    font-size: 14px;
+}
+body{
+	max-width:640px;
+	margin:auto;
+}
+a{
+    text-decoration: none;
+    color: #333;
+    padding:0;margin:0;
+    line-height: 14px;
+}
+ol, ul, li{
+    list-style: none
+}
+fieldset, img {
+    border: 0
+}
+.clearfix:after {
+    content: ".";
+    clear: both;
+    height: 0;
+    visibility: hidden;
+    display: block;
+}
+
+.clearfix{
+    *zoom:1;
+}
+
+.loading{display:none}
+.spinner {
+  margin: 5px auto;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 10px;
+  color:#5e5e5e;
+}
+ 
+.spinner > div {
+  background-color: #ccc;
+  height: 40%;
+  width: 3px;
+  display: inline-block;
+  margin-top:4%;
+   
+  -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
+  animation: stretchdelay 1.2s infinite ease-in-out;
+}
+ 
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+ 
+.spinner .rect3 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+ 
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+ 
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+ 
+@-webkit-keyframes stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) } 
+  20% { -webkit-transform: scaleY(1.0) }
+}
+ 
+@keyframes stretchdelay {
+  0%, 40%, 100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }  20% {
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
+}
+.comment_con{ padding:2%;}

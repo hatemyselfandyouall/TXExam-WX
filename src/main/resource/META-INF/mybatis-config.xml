@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//www.mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+    <settings>
+        <setting name="cacheEnabled" value="false"/>
+        <setting name="useGeneratedKeys" value="true"/>
+        <setting name="defaultExecutorType" value="REUSE"/>
+    </settings>
+
+    <mappers>
+        <!-- 扫描路径下的mapper映射文件 -->
+
+        <mapper resource="UserMapper.xml"/>
+        <!-- 扫描包下的接口文件 -->
+        <package name="example.model.dao" />
+    </mappers>
+
+</configuration>

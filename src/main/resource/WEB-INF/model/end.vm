@@ -1,0 +1,12 @@
+$screen_content
+<div class="footer_box">
+##        <a href=""><img src="../images/fot_icon1.png"/>首页</a>
+##
+##        <a href=""><img src="../images/fot_icon4.png"/>联系我们</a>
+        <a href="/home/start.htm"><img src="../images/fot_icon3.png"/>作品打分</a>
+        <a href="/home/userCenter.htm"><img src="../images/fot_icon2.png"/>个人中心</a>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+.clearfix:after {
+    content: ".";
+    clear: both;
+    height: 0;
+    visibility: hidden;
+    display: block;
+}
+
+.clearfix{
+    *zoom:1;
+}
+.login{padding-top:4% !important;position: relative;}
+.login_main{width:760px;margin:0 auto;background:#fff;padding:50px 0;}
+.content{float:right;padding-right:50px !important;}
+.erwei{width: 290px;padding-left:50px;}
+.erwei .logo{color:#35aa47;font-size:26px;}
+
+.regist .login_main .erwei{float:right;}
+.heartLogo{width:210px;padding-top:100px;/*padding-left:15px;*/text-align:center;}
+.top-header{padding:15px 0;}
+.header_out{width:760px;margin:0 auto;}

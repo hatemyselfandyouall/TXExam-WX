@@ -1,0 +1,64 @@
+body{font: 15px/1.5 Microsoft YaHei, Helvitica, Verdana, Arial, san-serif;}
+body, div, ul, ol, li, h4, p {
+    margin: 0;
+    padding: 0;
+    color: #444444;
+}
+.ggkBody{background: #e73e4b;}
+.ggkContainer{
+    padding-top: 140px;
+    background: url("/images/activity/ggk_bg.gif") center top no-repeat;
+}
+.ggkTitle{
+    width: 100%;
+    height: 135px;
+    background: url("/images/activity/ggkTitle.png") center top no-repeat;
+}
+.ggkScratchPadBg {
+    margin:5px auto;
+    background: url("/images/activity/ggk.gif") center top no-repeat;
+    width:290px;
+    height:117px;
+    padding:5px 0;
+}
+.wScratchPad {
+    background:#636161;
+    font-size: 20px;
+}
+.ggkContentBox {
+    margin: 15px 15px 0;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+.ggkContentBox .contentTitle{
+    margin:0;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: bold;
+    border-bottom: 1px dashed #ccc;
+}
+.ggkContentBox .priceTime {
+    line-height:25px;
+    font-size:12px;
+}
+.rewordBtn{
+    display: block;
+    padding: 10px 0;
+    background:#63B509;
+    text-align: center;
+    text-decoration: none;
+    color:#fff;
+    font-size: 16px;
+    margin: 15px;
+}
+
+/*中奖者信息*/
+.winner{padding:0;border-radius:0;}
+.winner p.top{background:#E73E4B;border-bottom: 1px solid #aaa;margin: 0;line-height: 40px;text-align: center;text-shadow: initial;color:#fff;}
+.winner .ui-field-contain{text-align:center; border-bottom:1px solid #bbb;padding:20px 0;}
+.winner .ui-field-contain .ui-shadow-inset{border-radius:0;-moz-box-shadow:none;-webkit-box-shadow:none;box-shadow:none;display:inline-block;width:68%;margin-left:1%;}
+.winner .w_input{font-size:1em;width:100%;}
+.winner .ui-btn{border-radius:0;margin:5% 2%;box-shadow:none;background:#63B509;border:none;}
+.winner .ui-btn .ui-btn-inner{text-shadow: initial;color:#fff;}
+
