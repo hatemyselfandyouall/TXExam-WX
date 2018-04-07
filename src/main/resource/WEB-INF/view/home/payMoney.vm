@@ -7,13 +7,22 @@
     <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
     <script src="https://res.wx.qq.com/open/libs/weuijs/1.0.0/weui.min.js"></script>
     <script src="../js/exam/payMoney.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
     <!--weui-->
+    <!---二维码生成-->
+    <script type='text/javascript' src='../js/exam/qrcode.js' charset='utf-8'></script>
 </head>
 <body>
 <div class="page__hd">
-    <h1 id="page__title" class="page__title">付款中。。。</h1>
-    <p class="page__desc">请稍等片刻</p>
+    <div id="message">
+        <h1 id="page__title" class="page__title" id="messageTitle">付款中。。。</h1>
+        <p class="page__desc" id="messageContent">请稍等片刻</p>
+    </div>
+    <div id="qrcode" style="">
+
+    </div>
 </div>
+
 </body>
 <script>
     function onBridgeReady(){
@@ -35,6 +44,7 @@
                 }
         );
     }
+    if('$!payType'==0){
     if (typeof WeixinJSBridge == "undefined"){
         if( document.addEventListener ){
             document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
@@ -44,6 +54,11 @@
         }
     }else{
         onBridgeReady();
+    }
+    }else{
+        new QRCode(document.getElementById('qrcode'),'$!codeUrl');
+        $("#messageTitle").html("请使用二维码扫码支付");
+        $("#messageContent").text("扫码下图二维码完成支付")
     }
 </script>
 <script>

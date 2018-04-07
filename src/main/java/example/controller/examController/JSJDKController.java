@@ -27,16 +27,6 @@ public class JSJDKController extends ReportCrawlerPorxy{
     @RequestMapping(value = "/share", method = RequestMethod.POST)
     @ResponseBody
     public Map<String, String> share(HttpServletRequest request) {
-//        String urlTemp = "http://" + request.getServerName() + request.getContextPath();
-//        String urlpath = "http://" + request.getServerName();
-//        String appUrl = request.getParameter("url");
-//        if (request.getParameter("code") != null) {
-//            appUrl += "&code=" + request.getParameter("code");
-//        }
-//        if (request.getParameter("state") != null) {
-//            appUrl += "&state=" + request.getParameter("state");
-//        }
-//        JSONObject result=new JSONObject();
         Map<String, String[]> params = request.getParameterMap();
         String appUrl = "";
         for (String key : params.keySet()) {

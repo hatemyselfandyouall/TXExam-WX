@@ -6,45 +6,17 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6b75665-686e-41bb-b0e3-a40af75ea0c7" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+    <list default="true" id="e6b75665-686e-41bb-b0e3-a40af75ea0c7" name="Default" comment="1">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/exam/qrcode.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/target/ROOT.war" afterPath="$PROJECT_DIR$/target/ROOT.war" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/controller/ReportCrawlerPorxy.class" afterPath="$PROJECT_DIR$/target/classes/example/controller/ReportCrawlerPorxy.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/controller/examController/BackDoorLoginController.class" afterPath="$PROJECT_DIR$/target/classes/example/controller/examController/BackDoorLoginController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/controller/examController/ExamController.class" afterPath="$PROJECT_DIR$/target/classes/example/controller/examController/ExamController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/controller/examController/PayMoneyController.class" afterPath="$PROJECT_DIR$/target/classes/example/controller/examController/PayMoneyController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/util/ConstantsUtil.class" afterPath="$PROJECT_DIR$/target/classes/example/util/ConstantsUtil.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/util/DateUtil.class" afterPath="$PROJECT_DIR$/target/classes/example/util/DateUtil.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/util/MD5Util.class" afterPath="$PROJECT_DIR$/target/classes/example/util/MD5Util.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/util/OrderUtil.class" afterPath="$PROJECT_DIR$/target/classes/example/util/OrderUtil.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/example/util/WXPayUtil.class" afterPath="$PROJECT_DIR$/target/classes/example/util/WXPayUtil.class" />
-      <change beforePath="$PROJECT_DIR$/target/jypt.jar" afterPath="$PROJECT_DIR$/target/jypt.jar" />
-      <change beforePath="$PROJECT_DIR$/target/jypt/META-INF/MANIFEST.MF" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/jypt/WEB-INF/classes/META-INF/jdbc.properties" afterPath="$PROJECT_DIR$/target/jypt/WEB-INF/classes/META-INF/jdbc.properties" />
-      <change beforePath="$PROJECT_DIR$/target/jypt/WEB-INF/classes/META-INF/log4j.properties" afterPath="$PROJECT_DIR$/target/jypt/WEB-INF/classes/META-INF/log4j.properties" />
-      <change beforePath="$PROJECT_DIR$/target/jypt/WEB-INF/classes/WEB-INF/view/examinationChoose.vm" afterPath="$PROJECT_DIR$/target/jypt/WEB-INF/classes/WEB-INF/view/examinationChoose.vm" />
-      <change beforePath="$PROJECT_DIR$/target/jypt/WEB-INF/classes/WEB-INF/view/home/examinationFinal.vm" afterPath="$PROJECT_DIR$/target/jypt/WEB-INF/classes/WEB-INF/view/home/examinationFinal.vm" />
-      <change beforePath="$PROJECT_DIR$/target/jypt/WEB-INF/classes/WEB-INF/view/home/examinationUserCenter.vm" afterPath="$PROJECT_DIR$/target/jypt/WEB-INF/classes/WEB-INF/view/home/examinationUserCenter.vm" />
-      <change beforePath="$PROJECT_DIR$/target/jypt/WEB-INF/classes/WEB-INF/view/home/fail.vm" afterPath="$PROJECT_DIR$/target/jypt/WEB-INF/classes/WEB-INF/view/home/fail.vm" />
-      <change beforePath="$PROJECT_DIR$/target/jypt/WEB-INF/classes/WEB-INF/view/home/neoexaminationPage.vm" afterPath="$PROJECT_DIR$/target/jypt/WEB-INF/classes/WEB-INF/view/home/neoexaminationPage.vm" />
-      <change beforePath="$PROJECT_DIR$/target/jypt/WEB-INF/classes/example/controller/ReportCrawlerPorxy.class" afterPath="$PROJECT_DIR$/target/jypt/WEB-INF/classes/example/controller/ReportCrawlerPorxy.class" />
-      <change beforePath="$PROJECT_DIR$/target/jypt/WEB-INF/classes/example/controller/examController/BackDoorLoginController.class" afterPath="$PROJECT_DIR$/target/jypt/WEB-INF/classes/example/controller/examController/BackDoorLoginController.class" />
-      <change beforePath="$PROJECT_DIR$/target/jypt/WEB-INF/classes/example/controller/examController/ExamController.class" afterPath="$PROJECT_DIR$/target/jypt/WEB-INF/classes/example/controller/examController/ExamController.class" />
-      <change beforePath="$PROJECT_DIR$/target/jypt/WEB-INF/classes/example/controller/examController/PayMoneyController.class" afterPath="$PROJECT_DIR$/target/jypt/WEB-INF/classes/example/controller/examController/PayMoneyController.class" />
-      <change beforePath="$PROJECT_DIR$/target/jypt/WEB-INF/classes/example/util/ConstantsUtil.class" afterPath="$PROJECT_DIR$/target/jypt/WEB-INF/classes/example/util/ConstantsUtil.class" />
-      <change beforePath="$PROJECT_DIR$/target/jypt/WEB-INF/classes/example/util/DateUtil.class" afterPath="$PROJECT_DIR$/target/jypt/WEB-INF/classes/example/util/DateUtil.class" />
-      <change beforePath="$PROJECT_DIR$/target/jypt/WEB-INF/classes/example/util/MD5Util.class" afterPath="$PROJECT_DIR$/target/jypt/WEB-INF/classes/example/util/MD5Util.class" />
-      <change beforePath="$PROJECT_DIR$/target/jypt/WEB-INF/classes/example/util/OrderUtil.class" afterPath="$PROJECT_DIR$/target/jypt/WEB-INF/classes/example/util/OrderUtil.class" />
-      <change beforePath="$PROJECT_DIR$/target/jypt/WEB-INF/classes/example/util/WXPayUtil.class" afterPath="$PROJECT_DIR$/target/jypt/WEB-INF/classes/example/util/WXPayUtil.class" />
-      <change beforePath="$PROJECT_DIR$/target/jypt/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/target/jypt/WEB-INF/web.xml" />
-      <change beforePath="$PROJECT_DIR$/target/jypt/images/exam/right.jpg" afterPath="$PROJECT_DIR$/target/jypt/images/exam/right.jpg" />
-      <change beforePath="$PROJECT_DIR$/target/jypt/images/exam/wrong.jpg" afterPath="$PROJECT_DIR$/target/jypt/images/exam/wrong.jpg" />
-      <change beforePath="$PROJECT_DIR$/target/jypt/js/exam/payMoney.js" afterPath="$PROJECT_DIR$/target/jypt/js/exam/payMoney.js" />
-      <change beforePath="$PROJECT_DIR$/target/jypt/web.xml" afterPath="$PROJECT_DIR$/target/jypt/web.xml" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/controller/examController/JSJDKController.java" afterPath="$PROJECT_DIR$/src/main/java/example/controller/examController/JSJDKController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/controller/examController/PayMoneyController.java" afterPath="$PROJECT_DIR$/src/main/java/example/controller/examController/PayMoneyController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/model/dataobject/UserExamination.java" afterPath="$PROJECT_DIR$/src/main/java/example/model/dataobject/UserExamination.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/resource/META-INF/mybatisxml/UserExaminationMapper.xml" afterPath="$PROJECT_DIR$/src/main/resource/META-INF/mybatisxml/UserExaminationMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resource/WEB-INF/view/examinationChoose.vm" afterPath="$PROJECT_DIR$/src/main/resource/WEB-INF/view/examinationChoose.vm" />
+      <change beforePath="$PROJECT_DIR$/src/main/resource/WEB-INF/view/home/payMoney.vm" afterPath="$PROJECT_DIR$/src/main/resource/WEB-INF/view/home/payMoney.vm" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/exam/examinationChoose.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/exam/examinationChoose.js" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,73 +28,60 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="JSJDKController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/example/controller/examController/JSJDKController.java">
+      <file leaf-file-name="PayMoneyController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/example/controller/examController/PayMoneyController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="35" column="54" lean-forward="true" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="54" />
+            <state relative-caret-position="966">
+              <caret line="65" column="31" lean-forward="false" selection-start-line="65" selection-start-column="31" selection-end-line="65" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InvocableHandlerMethod.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.10.RELEASE/spring-web-4.3.10.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2438">
+              <caret line="123" column="0" lean-forward="false" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <marker date="1521286766938" expanded="false" signature="0:104" ph="/.../" />
+                <marker date="1521286766938" expanded="false" signature="162:711" ph="..." />
+                <marker date="1521286766938" expanded="false" signature="1105:1116" ph=" { " />
+                <marker date="1521286766938" expanded="false" signature="1137:1143" ph=" }" />
+                <marker date="1521286766938" expanded="false" signature="1206:1217" ph=" { " />
+                <marker date="1521286766938" expanded="false" signature="1237:1243" ph=" }" />
+                <marker date="1521286766938" expanded="true" signature="1365:1421" ph="{...}" />
+                <marker date="1521286766938" expanded="true" signature="1500:1559" ph="{...}" />
+                <marker date="1521286766938" expanded="true" signature="1669:1728" ph="{...}" />
+                <marker date="1521286766938" expanded="true" signature="1822:1893" ph="{...}" />
+                <marker date="1521286766938" expanded="true" signature="2033:2638" ph="{...}" />
+                <marker date="1521286766938" expanded="true" signature="2788:4133" ph="{...}" />
+                <marker date="1521286766938" expanded="true" signature="4212:4389" ph="{...}" />
+                <marker date="1521286766938" expanded="true" signature="4485:4943" ph="{...}" />
+                <marker date="1521286766938" expanded="true" signature="5008:6165" ph="{...}" />
+                <marker date="1521286766938" expanded="true" signature="6250:6846" ph="{...}" />
+                <marker date="1521286766938" expanded="true" signature="6929:7500" ph="{...}" />
+                <marker date="1521286766938" expanded="true" signature="7560:7893" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExamSecurityFilter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/example/filter/ExamSecurityFilter.java">
+      <file leaf-file-name="payMoney.vm" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resource/WEB-INF/view/home/payMoney.vm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="554">
-              <caret line="60" column="20" lean-forward="false" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="20" />
+            <state relative-caret-position="67">
+              <caret line="39" column="36" lean-forward="false" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/example/util/OrderUtil.java">
+      <file leaf-file-name="payMoney.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/exam/payMoney.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MD5Util.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/example/util/MD5Util.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="598">
-              <caret line="27" column="34" lean-forward="false" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="examinationChoose.vm" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resource/WEB-INF/view/examinationChoose.vm">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="124" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="examinationFinal.vm" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resource/WEB-INF/view/home/examinationFinal.vm">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="45" column="2" lean-forward="false" selection-start-line="45" selection-start-column="2" selection-end-line="45" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="examinationUserCenter.vm" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resource/WEB-INF/view/home/examinationUserCenter.vm">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="762">
-              <caret line="101" column="9" lean-forward="false" selection-start-line="101" selection-start-column="9" selection-end-line="101" selection-end-column="9" />
+            <state relative-caret-position="0">
+              <caret line="0" column="9" lean-forward="false" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -131,29 +90,62 @@
       <file leaf-file-name="fail.vm" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resource/WEB-INF/view/home/fail.vm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="73" column="13" lean-forward="false" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
+            <state relative-caret-position="207">
+              <caret line="9" column="95" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="neoexaminationPage.vm" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resource/WEB-INF/view/home/neoexaminationPage.vm">
+      <file leaf-file-name="preExaminationController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/example/controller/examController/preExaminationController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="831">
-              <caret line="440" column="46" lean-forward="false" selection-start-line="440" selection-start-column="46" selection-end-line="440" selection-end-column="46" />
+            <state relative-caret-position="345">
+              <caret line="26" column="1" lean-forward="false" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="preExamination.vm" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resource/WEB-INF/view/home/preExamination.vm">
+      <file leaf-file-name="examinationChoose.vm" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resource/WEB-INF/view/examinationChoose.vm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="621">
-              <caret line="57" column="38" lean-forward="false" selection-start-line="57" selection-start-column="38" selection-end-line="57" selection-end-column="38" />
+            <state relative-caret-position="2829">
+              <caret line="123" column="0" lean-forward="false" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="examinationChoose.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/exam/examinationChoose.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="529">
+              <caret line="23" column="9" lean-forward="false" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="12903">
+              <caret line="561" column="45" lean-forward="false" selection-start-line="561" selection-start-column="45" selection-end-line="561" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserExaminationMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resource/META-INF/mybatisxml/UserExaminationMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1242">
+              <caret line="54" column="15" lean-forward="false" selection-start-line="54" selection-start-column="15" selection-end-line="54" selection-end-column="15" />
+              <folding>
+                <marker date="1523090651842" expanded="true" signature="1160:1526" ph="INSERT INTO user_examination... " />
+                <marker date="1523090651842" expanded="true" signature="1596:1619" ph="SELECT LAST_... " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -190,6 +182,8 @@
       <find>TOKEN_TICKET_CACHE</find>
       <find>sign</find>
       <find>timestamp</find>
+      <find>update</find>
+      <find>messageTitle</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -205,13 +199,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/example/filter/ExamSecurityFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/exam/examinationChoose.js" />
         <option value="$PROJECT_DIR$/src/main/java/example/model/service/QuestionService.java" />
         <option value="$PROJECT_DIR$/src/main/java/example/model/dao/QuestionMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/example/model/service/QuestionServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resource/META-INF/mybatisxml/QuestionMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/resource/WEB-INF/view/test.vm" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resource/META-INF/jdbc.properties" />
         <option value="$PROJECT_DIR$/src/main/webapp/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/example/controller/ReportCrawlerPorxy.java" />
@@ -220,7 +212,6 @@
         <option value="$PROJECT_DIR$/src/main/java/example/controller/examController/preExaminationController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/exam/payMoney.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/we/css/weui.css" />
-        <option value="$PROJECT_DIR$/src/main/java/example/controller/examController/PayMoneyController.java" />
         <option value="$PROJECT_DIR$/src/main/java/example/controller/examController/ExamController.java" />
         <option value="$PROJECT_DIR$/src/main/java/example/util/WXUtil/WxConfigUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/example/util/DateUtil.java" />
@@ -230,12 +221,20 @@
         <option value="$PROJECT_DIR$/src/main/resource/WEB-INF/view/home/examinationUserCenter.vm" />
         <option value="$PROJECT_DIR$/src/main/java/example/util/MD5Util.java" />
         <option value="$PROJECT_DIR$/src/main/java/example/util/OrderUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/resource/WEB-INF/view/examinationChoose.vm" />
         <option value="$PROJECT_DIR$/src/main/resource/WEB-INF/view/home/fail.vm" />
         <option value="$PROJECT_DIR$/src/main/resource/WEB-INF/view/home/neoexaminationPage.vm" />
         <option value="$PROJECT_DIR$/src/main/resource/WEB-INF/view/home/examinationFinal.vm" />
         <option value="$PROJECT_DIR$/src/main/resource/WEB-INF/view/home/preExamination.vm" />
         <option value="$PROJECT_DIR$/src/main/java/example/controller/examController/JSJDKController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/example/model/dataobject/UserExamination.java" />
+        <option value="$PROJECT_DIR$/src/main/java/example/util/ZXingUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/example/util/MatrixToImageWriter.java" />
+        <option value="$PROJECT_DIR$/src/main/resource/WEB-INF/view/examinationChoose.vm" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resource/META-INF/mybatisxml/UserExaminationMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/exam/examinationChoose.js" />
+        <option value="$PROJECT_DIR$/src/main/resource/WEB-INF/view/home/payMoney.vm" />
+        <option value="$PROJECT_DIR$/src/main/java/example/controller/examController/PayMoneyController.java" />
       </list>
     </option>
   </component>
@@ -281,178 +280,71 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="testSSM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test_1" type="462c0819:PsiDirectoryNode" />
+              <item name="TXExam-WX" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="testSSM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test_1" type="462c0819:PsiDirectoryNode" />
+              <item name="TXExam-WX" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="testSSM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test_1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="testSSM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test_1" type="462c0819:PsiDirectoryNode" />
+              <item name="TXExam-WX" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="testSSM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test_1" type="462c0819:PsiDirectoryNode" />
+              <item name="TXExam-WX" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="example" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="testSSM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test_1" type="462c0819:PsiDirectoryNode" />
+              <item name="TXExam-WX" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="example" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="testSSM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test_1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="example" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="examController" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="testSSM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test_1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="example" type="462c0819:PsiDirectoryNode" />
-              <item name="filter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="testSSM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test_1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="example" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="testSSM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test_1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="example" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="testSSM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test_1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resource" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="testSSM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test_1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resource" type="462c0819:PsiDirectoryNode" />
-              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="testSSM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test_1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resource" type="462c0819:PsiDirectoryNode" />
-              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="mybatisxml" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="testSSM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test_1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resource" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="testSSM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test_1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resource" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="testSSM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test_1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resource" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="exam" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="testSSM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test_1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resource" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="testSSM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test_1" type="462c0819:PsiDirectoryNode" />
+              <item name="TXExam-WX" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="testSSM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test_1" type="462c0819:PsiDirectoryNode" />
+              <item name="TXExam-WX" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="testSSM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test_1" type="462c0819:PsiDirectoryNode" />
+              <item name="TXExam-WX" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
               <item name="exam" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -465,7 +357,11 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="example.util" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\workSpace\TXExam-WX\src\main\webapp\js\exam" />
       <recent name="E:\workSpace\test_1\src\main\webapp\images\exam" />
       <recent name="E:\workSpace\test_1\src\main\resource\WEB-INF\view\home" />
     </key>
@@ -482,7 +378,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Maven.Unnamed">
+  <component name="RunManager" selected="Tomcat Server.Unnamed">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -819,6 +715,10 @@
       <workItem from="1522992260470" duration="5128000" />
       <workItem from="1523013129839" duration="7524000" />
       <workItem from="1523021130522" duration="11237000" />
+      <workItem from="1523067495956" duration="356000" />
+      <workItem from="1523069034336" duration="5155000" />
+      <workItem from="1523088502208" duration="5377000" />
+      <workItem from="1523111145307" duration="15000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1522019120191</created>
@@ -838,42 +738,42 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73113000" />
+    <option name="totallyTimeSpent" value="84016000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928178" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928178" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4082098" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839224" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928178" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928178" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295325" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27038628" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28540772" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36145952" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839224" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -931,15 +831,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/example/controller/examController/JSJDKController.java</url>
-          <line>48</line>
-          <properties />
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="32" />
+      <option name="time" value="37" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -948,70 +840,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/example/model/service/QuestionService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="33" column="42" lean-forward="false" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/example/model/dao/QuestionMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="24" column="64" lean-forward="false" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/example/model/service/QuestionServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="110" column="0" lean-forward="false" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/META-INF/mybatisxml/QuestionMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1587">
-          <caret line="69" column="25" lean-forward="false" selection-start-line="69" selection-start-column="25" selection-end-line="69" selection-end-column="25" />
-          <folding>
-            <marker date="1522248175985" expanded="true" signature="1334:1760" ph="INSERT INTO question... " />
-            <marker date="1522248175985" expanded="true" signature="1830:1853" ph="SELECT LAST_... " />
-            <marker date="1522248175985" expanded="true" signature="3332:3349" ph="UPDATE quest... question" />
-            <marker date="1522248175985" expanded="true" signature="3744:4003" ph="SELECT * FRO... question" />
-            <marker date="1522248175985" expanded="true" signature="4092:4124" ph="SELECT count... question" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/example/controller/examController/QuestionManagerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2806">
-          <caret line="151" column="44" lean-forward="false" selection-start-line="151" selection-start-column="44" selection-end-line="151" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/WEB-INF/view/start.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/WEB-INF/view/test.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="11" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/META-INF/spring-mybatis.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="22" column="51" lean-forward="false" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -1027,21 +855,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12949">
-          <caret line="563" column="45" lean-forward="false" selection-start-line="563" selection-start-column="45" selection-end-line="563" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/META-INF/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/exam/examinationManager.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2645">
@@ -1053,7 +866,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="39" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1068,7 +880,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-437">
           <caret line="34" column="38" lean-forward="false" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1092,32 +903,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/WEB-INF/view/home/payMoney.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-153">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/example/controller/examController/ExaminationUserCenterController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="598">
           <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/exam/payMoney.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="15" lean-forward="false" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/exam/examinationChoose.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="759">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1132,9 +921,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-506">
           <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="31" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1143,7 +929,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="808">
           <caret line="71" column="5" lean-forward="false" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1151,7 +936,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
           <caret line="23" column="55" lean-forward="true" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1159,7 +943,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="59" column="56" lean-forward="false" selection-start-line="59" selection-start-column="43" selection-end-line="59" selection-end-column="56" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1167,7 +950,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="53" column="20" lean-forward="true" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1175,7 +957,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="278">
           <caret line="701" column="39" lean-forward="false" selection-start-line="701" selection-start-column="23" selection-end-line="701" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1183,7 +964,160 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="759">
           <caret line="33" column="148" lean-forward="false" selection-start-line="33" selection-start-column="139" selection-end-line="33" selection-end-column="148" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/example/controller/BasicController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resource/WEB-INF/view/error.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="26" lean-forward="false" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/example/util/WXPayUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/example/util/PDFParseUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="35" column="13" lean-forward="false" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/example/controller/examController/JSJDKController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="39" column="34" lean-forward="false" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/example/filter/ExamSecurityFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1380">
+          <caret line="60" column="20" lean-forward="false" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/example/util/OrderUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1449">
+          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/example/util/MD5Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="27" column="34" lean-forward="false" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resource/WEB-INF/view/home/examinationFinal.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1035">
+          <caret line="45" column="2" lean-forward="false" selection-start-line="45" selection-start-column="2" selection-end-line="45" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resource/WEB-INF/view/home/neoexaminationPage.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10120">
+          <caret line="440" column="46" lean-forward="false" selection-start-line="440" selection-start-column="46" selection-end-line="440" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resource/WEB-INF/view/home/preExamination.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1311">
+          <caret line="57" column="38" lean-forward="false" selection-start-line="57" selection-start-column="38" selection-end-line="57" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/example/model/dataobject/UserExamination.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/example/controller/examController/PayBackCheckController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="84" column="20" lean-forward="false" selection-start-line="84" selection-start-column="20" selection-end-line="84" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/example/util/MatrixToImageWriter.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/example/util/ZXingUtil.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/resource/WEB-INF/view/home/examinationUserCenter.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2116">
+          <caret line="92" column="46" lean-forward="false" selection-start-line="92" selection-start-column="46" selection-end-line="92" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resource/WEB-INF/view/exam/addExamination.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4370">
+          <caret line="190" column="13" lean-forward="false" selection-start-line="190" selection-start-column="13" selection-end-line="190" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resource/WEB-INF/view/exam/examList.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/exam/qrcode.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="14" column="28" lean-forward="false" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/example/controller/examController/QuestionManagerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2990">
+          <caret line="159" column="33" lean-forward="true" selection-start-line="159" selection-start-column="33" selection-end-line="159" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resource/META-INF/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="18" lean-forward="false" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12903">
+          <caret line="561" column="45" lean-forward="false" selection-start-line="561" selection-start-column="45" selection-end-line="561" selection-end-column="45" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resource/META-INF/mybatisxml/UserExaminationMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1242">
+          <caret line="54" column="15" lean-forward="false" selection-start-line="54" selection-start-column="15" selection-end-line="54" selection-end-column="15" />
+          <folding>
+            <marker date="1523090651842" expanded="true" signature="1160:1526" ph="INSERT INTO user_examination... " />
+            <marker date="1523090651842" expanded="true" signature="1596:1619" ph="SELECT LAST_... " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1214,141 +1148,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/example/controller/BasicController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resource/WEB-INF/view/home/fail.vm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/WEB-INF/view/error.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="26" lean-forward="false" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+        <state relative-caret-position="207">
+          <caret line="9" column="95" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/example/controller/examController/preExaminationController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
+        <state relative-caret-position="345">
           <caret line="26" column="1" lean-forward="false" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/example/controller/examController/PayBackCheckController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-90">
-          <caret line="84" column="20" lean-forward="false" selection-start-line="84" selection-start-column="20" selection-end-line="84" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/example/util/WXPayUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/example/util/PDFParseUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="35" column="13" lean-forward="false" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/example/controller/examController/PayMoneyController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="55" column="39" lean-forward="false" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/example/util/OrderUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resource/WEB-INF/view/examinationChoose.vm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="124" selection-end-column="9" />
+        <state relative-caret-position="2829">
+          <caret line="123" column="0" lean-forward="false" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/WEB-INF/view/home/fail.vm">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/exam/examinationChoose.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="73" column="13" lean-forward="false" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
+        <state relative-caret-position="529">
+          <caret line="23" column="9" lean-forward="false" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/WEB-INF/view/home/examinationFinal.vm">
+    <entry file="file://$PROJECT_DIR$/src/main/java/example/controller/examController/PayMoneyController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="45" column="2" lean-forward="false" selection-start-line="45" selection-start-column="2" selection-end-line="45" selection-end-column="2" />
+        <state relative-caret-position="966">
+          <caret line="65" column="31" lean-forward="false" selection-start-line="65" selection-start-column="31" selection-end-line="65" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/WEB-INF/view/home/preExamination.vm">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/exam/payMoney.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="57" column="38" lean-forward="false" selection-start-line="57" selection-start-column="38" selection-end-line="57" selection-end-column="38" />
+        <state relative-caret-position="0">
+          <caret line="0" column="9" lean-forward="false" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/example/util/MD5Util.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resource/WEB-INF/view/home/payMoney.vm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="27" column="34" lean-forward="false" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="34" />
+        <state relative-caret-position="67">
+          <caret line="39" column="36" lean-forward="false" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/WEB-INF/view/home/examinationUserCenter.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="762">
-          <caret line="101" column="9" lean-forward="false" selection-start-line="101" selection-start-column="9" selection-end-line="101" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resource/WEB-INF/view/home/neoexaminationPage.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="831">
-          <caret line="440" column="46" lean-forward="false" selection-start-line="440" selection-start-column="46" selection-end-line="440" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/example/filter/ExamSecurityFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="554">
-          <caret line="60" column="20" lean-forward="false" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/example/controller/examController/JSJDKController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="35" column="54" lean-forward="true" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

@@ -17,6 +17,9 @@
     <script src="../weui/lib/jquery-2.1.4.js"></script>
     <script src="../weui/js/jquery-weui.min.js"></script>
     <script type='text/javascript' src='../weui/js/swiper.js' charset='utf-8'></script>
+    <!---二维码生成-->
+    <script type='text/javascript' src='../js/exam/qrcode.js' charset='utf-8'></script>
+
 </head>
 <body class="weui-pull-to-refresh">
 <div class="weui-pull-to-refresh__layer">
@@ -66,6 +69,7 @@
 </div>
 
 </div>
+<div id="qrcode_1"></div>
 <div class="weui-tabbar">
     <a href="/home/startexam.htm" class="weui-tabbar__item weui-bar__item_on">
                     <span style="display: inline-block;position: relative;">
@@ -122,6 +126,8 @@
         }
     });
     })
+</script>
+<script>
 </script>
 <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 <script src="../js/exam/examinationChoose.js"></script>

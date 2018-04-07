@@ -456,6 +456,8 @@
       <artifactId>spring-data-redis</artifactId>
       <version>2.0.4.RELEASE</version>
     </dependency>
+    <!--二维码-->
+
   </dependencies>
 
   <build>
@@ -561,7 +563,7 @@
         <bfSong>E:\\simsun\\simsun.ttc</bfSong>
         <testurl>E:\\apache-tomcat-7.0.75\\webapps</testurl>
         <locationurl>E:\\apache-tomcat-7.0.75\\webapps</locationurl>
-        <log4j><![CDATA[debug,CONSOLE,CONSOLE]]></log4j>
+        <log4j><![CDATA[debug,CONSOLE,DEFAULT]]></log4j>
         <jy.webservice.url>http://58.61.218.61/HZWS/lis.dll/soap/ILis</jy.webservice.url>
       </properties>
       <activation>

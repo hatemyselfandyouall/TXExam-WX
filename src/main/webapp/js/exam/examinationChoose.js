@@ -50,12 +50,11 @@ function payStart(examinationId){
                     alert(rt.ret_msg);
                 }
                 if (rt.ret_code == "1") {
-                    window.location.href = '/home/payMoney.htm?examinationId=' + examinationId + "&prepay_id=" + rt.prepay_id;
+                    window.location.href = '/home/payMoney.htm?examinationId=' + examinationId + "&prepay_id=" + rt.prepay_id+"&payType=0";
                 }
             }
         });
     }else {
-        alert('非微信浏览器使用二维码支付，此处建议使用二维码支付，待定中')
         $.ajax({
             type: "post",
             url: "/home/payMoney.htm?action=prePayRequest",
@@ -71,7 +70,7 @@ function payStart(examinationId){
                     alert(rt.ret_msg);
                 }
                 if (rt.ret_code == "1") {
-                    window.location.href="/home/mainPage.htm?id="+examinationId;
+                    window.location.href = '/home/payMoney.htm?examinationId=' + examinationId + "&payType=1&codeUrl="+rt.code_url+ "&prepay_id=" + rt.prepay_id ;
                 }
             }
         });

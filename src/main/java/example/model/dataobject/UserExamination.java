@@ -43,6 +43,9 @@ public class UserExamination implements Serializable{
 
     private Integer testCount;
 
+    private Integer payType;
+
+    private String codeUrl;
     //========== getters and setters ==========
 	
     public Integer getId() {
@@ -166,5 +169,21 @@ public class UserExamination implements Serializable{
 
     public void setTestCount(Integer testCount) {
         this.testCount = testCount;
+    }
+
+    public String getCodeUrl() {
+        return codeUrl;
+    }
+
+    public void setCodeUrl(String codeUrl) {
+        this.codeUrl = codeUrl;
+    }
+
+    public Integer getPayType() {
+        return payType;
+    }
+
+    public void setPayType(Integer payType) {
+        this.payType = payType;
     }
 }
