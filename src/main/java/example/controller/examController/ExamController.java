@@ -62,9 +62,9 @@ public class ExamController {
             User user = (User) request.getSession().getAttribute(ConstantsUtil.ADMINUSER);
             Map<String, Object> param = new HashMap<>();
             //第一步，确认用户有考试资格，确认用户的考试中退次数不到3次
-            if (!checkExam(examination, param, user)) {
-                return "redirect:/home/fail.htm?id=" + examination.getId() + "&type=" + ExaminationConstant.EXIT_TO_MUCH_TIME;
-            }
+//            if (!checkExam(examination, param, user)) {
+//                return "redirect:/home/fail.htm?id=" + examination.getId() + "&type=" + ExaminationConstant.EXIT_TO_MUCH_TIME;
+//            }
 
             Map<Integer, List<Question>> questionMap = new HashMap<>();
             Map<Integer, Map<Integer, List<Question>>> examinationQuestionMap = (Map<Integer, Map<Integer, List<Question>>>) request.getSession().getAttribute("examinationQuestionMap");
@@ -284,7 +284,7 @@ public class ExamController {
         map.put("detail",resultDetail);
         map.put("examination", examination);
         HttpSession session=request.getSession();
-        finalExam(user.getId(),examination.getId(),session);
+        finalExam(user.getId(),examination.getId(),session,totalScore);
         return "/home/examinationFinal";
     }
 
@@ -463,7 +463,7 @@ public class ExamController {
         }
     }
 
-    private void finalExam(Integer userId,Integer examinationId,HttpSession session){
+    private void finalExam(Integer userId,Integer examinationId,HttpSession session,Double totalScore){
         session.removeAttribute("remainTime");
         session.removeAttribute("startExamTime");
         Map < Integer, Map < Integer, List < Question >>> examinationQuestionMap = (Map<Integer,Map<Integer, List<Question>>>) session.getAttribute("examinationQuestionMap");
@@ -479,6 +479,7 @@ public class ExamController {
             return;
         }else {
             userExaminations.get(0).setIsDelete(1);
+            userExaminations.get(0).setTotalScore(totalScore);
             userExaminationService.update(userExaminations.get(0));
             return;
         }

@@ -46,6 +46,8 @@ public class UserExamination implements Serializable{
     private Integer payType;
 
     private String codeUrl;
+
+    private Double totalScore;
     //========== getters and setters ==========
 	
     public Integer getId() {
@@ -185,5 +187,13 @@ public class UserExamination implements Serializable{
 
     public void setPayType(Integer payType) {
         this.payType = payType;
+    }
+
+    public Double getTotalScore() {
+        return totalScore;
+    }
+
+    public void setTotalScore(Double totalScore) {
+        this.totalScore = totalScore;
     }
 }

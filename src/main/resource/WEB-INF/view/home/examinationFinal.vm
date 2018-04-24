@@ -53,24 +53,12 @@
 <input type="hidden" name='sumScore' id='sumScore' value="0">
 </body>
 <script type="text/javascript" >
-    $(function(){
+    $(function() {
 
         initExam();
+    })
 
 
-        $(".submit").click(function() {
-            checkAnswer2(this)
-        });
-        $(".submit2").click(function() {
-            checkAnswer3(this)
-        });
-        $('li').click(function(){
-            if($(this).attr('questionType')==3){
-                changeState($(this).find('input')[0]);
-                return;
-            }
-            checkAnswer(this)
-        });
 
 
 

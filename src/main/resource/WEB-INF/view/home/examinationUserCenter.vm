@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
     <meta name="generator" content="bd-mobcard">
     <meta http-equiv="Cache-Control" content="no-cache">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
     <!--weui-->
     <link rel="stylesheet" href="../we/css/weui.css"/>
     <link rel="stylesheet" href="../we/example.css"/>
@@ -26,19 +27,29 @@
 <body>
 
 <div class="page__hd">
-    <h1 class="page__title">userCenter</h1>
-    <p class="page__desc">个人中心</p>
+    <h1 class="page__title" style="color: #0B90C4">userCenter</h1>
+    <p class="page__desc" style="color: #0B90C4">个人中心</p>
 </div>
 <div class="page__bd">
     <div class="weui-panel weui-panel_access">
-        <div class="weui-panel__hd">我购买的测验</div>
-        <div class="weui-panel__bd">
+        <div class="weui-panel__hd" style="color: #0B90C4">我购买的测验</div>
+        <div class="weui-panel__bd" >
             #foreach($userExamination in $userExaminations)
-            <div class="weui-media-box weui-media-box_text">
-                <h4 class="weui-media-box__title">$!userExamination.examinationName</h4>
-                <p class="weui-media-box__desc">测试购买日期：$!dateUtil.dateToString4($userExamination.payTime)</p>
-                <p class="weui-media-box__desc">测验资格有效期：一天</p>
+            <div class="weui-media-box weui-media-box_text" onclick="continueExam($userExamination.examinationId,'$userExamination.testCount',$userExamination.id)">
+                <h4 class="weui-media-box__title" style="color: #0B90C4">$!userExamination.examinationName</h4>
+                <p class="weui-media-box__desc" style="color: #0B90C4">测试购买日期：$!dateUtil.dateToString4($userExamination.payTime)</p>
+                <p class="weui-media-box__desc" style="color: #0B90C4">测验资格有效期：一天</p>
             </div>
+            #end
+        </div>
+        <div class="weui-panel__hd" style="color: #0B90C4">我的历史分数</div>
+
+        #if($hasHistory==1)
+        <div class="weui-panel__bd">
+                <div class="weui-media-box weui-media-box_text">
+                    <p class="weui-media-box__desc" style="color: #0B90C4">已购买模拟考试$!examTime次，平均分为$!avaScore分，最后一次得分为$!finalScore分，继续努力啊！</p>
+
+                </div>
             #end
         </div>
 ##        <div class="weui-panel__ft">
@@ -64,6 +75,8 @@
 </div>
 
 </body>
+<script src="../js/exam/examinationUserCenter.js"></script>
+
 <script>
     $(document).ready(function () {
         //通过ajax，在页面加载的时候获取微信分享接口signature，nonceStr，timestamp 和appId

@@ -58,11 +58,6 @@ public class PayMoneyController extends ReportCrawlerPorxy {
         param.put("prepayId",prepay_id);
         String xml=OrderUtil.getRequestXml(param);
         WXPayLog.info("发送给微信的报文：" + xml);
-        String payType=request.getParameter("payType");
-        if("1".equals(payType)){
-            map.put("codeUrl",request.getParameter("codeUrl"));
-        }
-        map.put("payType",payType);
         map.put("param",param);
         return "/home/payMoney";
     }
@@ -119,7 +114,20 @@ public class PayMoneyController extends ReportCrawlerPorxy {
         String examinationId=request.getParameter("examinationId");
         Examination examination=examinationService.getByKey(examinationId);
         WXPayLog.info("用户"+user.getWNickname()+"开始购买商品"+examination.getName());
+
         String payType=request.getParameter("payType");
+        if ("2".equals(payType)){
+            WXPayLog.info("用户" + user.getWNickname() + "开始购买商品" + examination.getName() + "使用非微信浏览器，直接进入做题页面");
+            UserExamination userExamination=UserExamination.createOrder(user.getId(), examination.getId(),examination.getName(), null,null);
+            userExamination.setPayTime(new Date());
+            userExamination.setHasPayed(1);
+            userExaminationService.insert(userExamination);
+            result.put("ret_code",1);
+            ResultUtil.writeResult(response,result.toString());
+            return;
+        }
+
+
         String nonceStr = "5K8264ILTKCH16CQ2502SI8ZNMTM67VS";//暂时不变
         String body="CommunicationExamination-Order";
         String ip= NetworkUtil.getIpAddress(request);
@@ -136,11 +144,11 @@ public class PayMoneyController extends ReportCrawlerPorxy {
         map.put("spbill_create_ip", ip);//支付ip
         map.put("out_trade_no", orderSn);//商品订单号
         map.put("total_fee", String.valueOf((int)(double)(examination.getPrice() * 100)));//真实金额
-        if("2".equals(payType)){
-            map.put("trade_type", "NATIVE");//JSAPI、h5调用
-        }else {
-            map.put("trade_type", "JSAPI");//JSAPI、h5调用
-        }
+//        if("2".equals(payType)){
+//            map.put("trade_type", "NATIVE");//JSAPI、h5调用
+//        }else {
+        map.put("trade_type", "JSAPI");//JSAPI、h5调用
+//        }
         map.put("openid", user.getOpenid());//支付用户openid
 
         String sign = OrderUtil.createSign("UTF-8",map);
@@ -178,13 +186,6 @@ public class PayMoneyController extends ReportCrawlerPorxy {
             result.put("ret_msg", res);
             result.put("prepay_id",payId);
             UserExamination userExamination=UserExamination.createOrder(user.getId(), examination.getId(),examination.getName(), orderSn,payId);
-            if("2".equals(payType)){
-                result.put("code_url", WXResult.get("code_url"));//JSAPI、h5调用
-                userExamination.setCodeUrl(WXResult.get("code_url"));
-                userExamination.setPayType(1);
-            }else {
-                userExamination.setPayType(0);
-            }
             userExaminationService.insert(userExamination);
         }else {
             result.put("ret_code", 0);

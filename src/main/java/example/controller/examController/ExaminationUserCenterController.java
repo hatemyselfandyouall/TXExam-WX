@@ -7,6 +7,8 @@ import example.model.service.ExaminationService;
 import example.model.service.QuestionService;
 import example.model.service.UserExaminationService;
 import example.util.ConstantsUtil;
+import example.util.ResultUtil;
+import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -15,9 +17,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
  * Created by YS-GZD-1495 on 2018/2/6.
@@ -49,6 +53,30 @@ public class ExaminationUserCenterController {
         param.put("canTest",1);
         List<UserExamination> userExaminations=userExaminationService.findEntitys(param);
         map.put("userExaminations",userExaminations);
+        param.clear();
+        param.put("userId",user.getId());
+        param.put("examFinal",1);
+        userExaminations=userExaminationService.findEntitys(param);
+        if(userExaminations.isEmpty()){
+            map.put("hasHistory",0);
+        }else {
+            map.put("hasHistory",1);
+            map.put("examTime",userExaminations.size());
+            map.put("avaScore",userExaminations.stream().collect(Collectors.averagingDouble(UserExamination::getTotalScore)));
+            map.put("finalScore",userExaminations.get(0).getTotalScore());
+        }
         return "/home/examinationUserCenter";
     }
+
+    @RequestMapping(method = RequestMethod.POST,params = "action=addTestCount")
+    public void addTestCount(HttpServletRequest request, HttpServletResponse response, ModelMap map) throws IOException {
+        String id=request.getParameter("id");
+        UserExamination userExamination=userExaminationService.getByKey(id);
+        userExamination.setTestCount((userExamination.getTestCount() != null ? userExamination.getTestCount() : 0) + 1);
+        userExaminationService.update(userExamination);
+        JSONObject result=new JSONObject();
+        result.put("ret_code",1);
+        ResultUtil.writeResult(response,result.toString());
+    }
 }
+
