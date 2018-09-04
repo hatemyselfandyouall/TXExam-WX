@@ -54,6 +54,7 @@ public class StartTestController {
         for (Examination examination:examinations){
         param.put("examinationId",examination.getId());
             param.put("orderByStr", "create_time desc");
+            param.put("hasPayed", "1");
             List<UserExamination> userExaminations=userExaminationService.findEntitys(param);
             if (!userExaminations.isEmpty()) {
                 Date now=new Date();
